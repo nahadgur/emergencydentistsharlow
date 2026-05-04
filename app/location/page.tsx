@@ -9,7 +9,6 @@ import { siteConfig, FAQS_LOCATION } from '@/data/site';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { LeadFormModal } from '@/components/LeadFormModal';
-import { HeroLeadForm } from '@/components/HeroLeadForm';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { FAQ } from '@/components/FAQ';
 import { buildBreadcrumbSchema } from '@/lib/breadcrumbs';
@@ -37,24 +36,21 @@ export default function LocationsIndexPage() {
 
       <main className="flex-grow bg-cream">
 
+        {/* Hero is single-column. Lead form removed from this page;
+            the bottom CTA opens the global LeadFormModal instead. */}
         <section className="bg-ink text-white">
           <div className="container-width pt-10 pb-14 lg:pt-14 lg:pb-20">
             <Breadcrumbs dark items={[{ label: 'Areas' }]} />
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start mt-6">
-              <div className="lg:col-span-7">
-                <p className="text-[10px] font-mono uppercase tracking-[0.22em] text-brand-300 mb-4">
-                  Coverage by neighbourhood
-                </p>
-                <h1 className="font-display text-[34px] lg:text-[48px] leading-tight text-white mb-5">
-                  Harlow areas we cover
-                </h1>
-                <p className="text-[15px] lg:text-[17px] leading-relaxed text-white/80 max-w-xl">
-                  Hand-written guides for each Harlow neighbourhood plus the surrounding CM-postcode towns. Each guide profiles the dominant patient mix, the local clinical challenges, and the practices we typically match from.
-                </p>
-              </div>
-              <div className="lg:col-span-5">
-                <HeroLeadForm />
-              </div>
+            <div className="mt-6 max-w-3xl">
+              <p className="text-[10px] font-mono uppercase tracking-[0.22em] text-brand-300 mb-4">
+                Coverage by neighbourhood
+              </p>
+              <h1 className="font-sans font-medium text-[34px] lg:text-[52px] leading-[1.05] tracking-tightest text-white mb-5">
+                Harlow areas we cover
+              </h1>
+              <p className="text-[15px] lg:text-[17px] leading-[1.6] text-white/80 max-w-2xl">
+                Hand-written guides for each Harlow neighbourhood plus the surrounding CM-postcode towns. Each guide profiles the dominant patient mix, the local clinical challenges, and the practices we typically match from.
+              </p>
             </div>
           </div>
         </section>
