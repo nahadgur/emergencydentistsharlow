@@ -1,19 +1,23 @@
 import type { Metadata } from 'next';
-import { Inter, Source_Serif_4, JetBrains_Mono } from 'next/font/google';
+import { Inter_Tight, Instrument_Serif, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 import { siteConfig } from '@/data/site';
 import { ConsentBanner } from '@/components/ConsentBanner';
 
-const sans = Inter({
+// 2026-05-05 redesign — Inter Tight (UI), Instrument Serif (italic accents
+// only; sparingly), JetBrains Mono (eyebrows + code-style labels). Pulled
+// from the Claude Design handoff for the dental homepage prototype.
+const sans = Inter_Tight({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '500', '600'],
   variable: '--font-sans',
   display: 'swap',
 });
 
-const display = Source_Serif_4({
+const display = Instrument_Serif({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['400'],
+  style: ['normal', 'italic'],
   variable: '--font-display',
   display: 'swap',
 });

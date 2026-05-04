@@ -29,24 +29,27 @@ export function FAQ({ faqs, title = 'Frequently asked questions', embedSchema = 
       {embedSchema && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       )}
-      <h2 className="font-display text-[26px] lg:text-[32px] text-ink leading-tight mb-6">
+      <h2
+        className="font-sans font-medium text-ink leading-[1.1] tracking-tightest mb-8"
+        style={{ fontSize: 'clamp(26px, 3.4vw, 40px)' }}
+      >
         {title}
       </h2>
-      <div className="space-y-3">
+      <div className="border-t border-sand">
         {faqs.map((faq, i) => (
-          <div key={i} className="bg-cream border border-ink/10 rounded-lg overflow-hidden">
+          <div key={i} className="border-b border-sand">
             <button
               onClick={() => setOpenIndex(openIndex === i ? null : i)}
-              className="w-full flex items-center justify-between gap-4 px-5 lg:px-6 py-4 text-left text-[15px] font-semibold text-ink hover:bg-ink/[0.02] transition-colors"
+              className="w-full flex items-center justify-between gap-4 py-5 text-left text-[15px] lg:text-[16px] font-medium text-ink hover:text-brand-600 transition-colors"
             >
               <span>{faq.question}</span>
               <ChevronDown
                 size={18}
-                className={`text-ink/40 flex-shrink-0 transition-transform duration-200 ${openIndex === i ? 'rotate-180' : ''}`}
+                className={`text-sand-text flex-shrink-0 transition-transform duration-200 ${openIndex === i ? 'rotate-180' : ''}`}
               />
             </button>
             {openIndex === i && (
-              <div className="px-5 lg:px-6 pb-5 pt-3 text-[14.5px] text-ink/75 leading-relaxed border-t border-ink/8">
+              <div className="pb-5 text-[14.5px] text-sand-body leading-[1.65] max-w-prose">
                 {faq.answer}
               </div>
             )}

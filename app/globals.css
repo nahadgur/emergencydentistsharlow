@@ -2,39 +2,155 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 2026-05-05 redesign — calm dental palette from the Claude Design
+   handoff. Warm off-white #faf7f0 base, deep ink #0f1f1c text, teal
+   #3a8a78 primary accent, coral #c4624e for high-friction CTAs. Type
+   pairs Inter Tight (UI) with Instrument Serif (italic accents only)
+   and JetBrains Mono (eyebrows). */
+
 @layer base {
-  html { -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+  html {
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+  }
   body {
     font-family: var(--font-sans), system-ui, sans-serif;
     color: theme('colors.ink');
     background: theme('colors.cream');
+    letter-spacing: -0.005em;
   }
-  h1, h2, h3, h4 {
-    font-family: var(--font-display), Georgia, serif;
+  h1, h2, h3, h4, h5, h6 {
+    /* Headings use Inter Tight by default. The italic accent treatment
+       is opt-in via `.italic-accent` (Instrument Serif italic). */
+    font-family: var(--font-sans), system-ui, sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.03em;
   }
 }
 
 @layer components {
   .container-width { @apply max-w-7xl mx-auto px-5 sm:px-6 lg:px-10; }
 
+  /* ---- CTAs ---- */
+  /* Primary action — coral. Used for the headline conversion button only.
+     Coral is the high-friction accent; reserve it for one CTA per fold. */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-md bg-brand-600 hover:bg-brand-700 text-white font-semibold text-[14px] transition-colors;
+    @apply inline-flex items-center justify-center gap-2 px-5 py-3 bg-coral-500 hover:bg-coral-600 text-cream font-medium text-[14.5px] tracking-tight transition-colors;
   }
   .btn-primary:disabled { @apply opacity-60 cursor-not-allowed; }
 
+  /* Secondary — bordered ink, transparent fill. Sits next to the coral
+     primary or on its own. */
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-md border border-ink/25 hover:border-ink hover:bg-ink hover:text-white text-ink font-semibold text-[14px] transition-colors;
+    @apply inline-flex items-center justify-center gap-2 px-5 py-3 border border-ink hover:bg-ink hover:text-cream text-ink font-medium text-[14.5px] tracking-tight transition-colors;
   }
 
+  /* On-dark variant — used inside the dark triage / footer surfaces.
+     Coral square paired with a label, mirroring the design's headline
+     CTA pattern. */
   .btn-on-dark {
-    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-md bg-white text-ink hover:bg-cream font-semibold text-[14px] transition-colors;
+    @apply inline-flex items-center justify-center gap-2 px-5 py-3 bg-coral-500 hover:bg-coral-600 text-cream font-medium text-[14.5px] tracking-tight transition-colors;
   }
 
+  /* ---- Eyebrow / numbered eyebrow ---- */
+  /* Plain eyebrow — uppercase mono, small, used to label sections. */
   .eyebrow {
-    @apply text-[10px] font-mono uppercase tracking-[0.22em] text-ink/55;
+    @apply font-mono uppercase text-[10px] tracking-[0.18em];
+    color: theme('colors.sand-text');
+  }
+  /* Eyebrow on dark bg variant. */
+  .eyebrow-on-dark {
+    @apply font-mono uppercase text-[10px] tracking-[0.18em] text-ink-mute;
+  }
+  /* Numbered eyebrow — "01 — Section name". Pairs the section number
+     with the section label, matching the design's narrative-spine
+     navigation. */
+  .eyebrow-num {
+    @apply font-mono uppercase text-[10px] tracking-[0.18em];
+    color: theme('colors.sand-text');
+  }
+  .eyebrow-num-on-dark {
+    @apply font-mono uppercase text-[10px] tracking-[0.18em] text-ink-mute;
   }
 
-  .card {
-    @apply bg-white border border-ink/10 rounded-lg transition-all hover:border-brand-300 hover:shadow-md;
+  /* ---- Italic accent ---- */
+  /* Wraps a phrase inside a heading to render in Instrument Serif italic.
+     Use sparingly — one accent per heading. */
+  .italic-accent {
+    font-family: var(--font-display), Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
   }
+
+  /* ---- Status pill ---- */
+  /* Dark pill with green dot used in the hero — "Open · matched today"
+     feel. Pure presentational, no clinical claims. */
+  .status-pill {
+    @apply inline-flex items-center gap-2 bg-ink text-ink-soft-text font-mono uppercase text-[11px] tracking-[0.08em] px-2.5 py-1.5;
+  }
+  .status-pill::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 9999px;
+    background: #7dd3a8;
+    box-shadow: 0 0 0 4px #7dd3a822;
+  }
+
+  /* ---- Stripes placeholder ---- */
+  /* 135deg repeating-linear-gradient — used where real photography will
+     eventually land. Centered mono label inside a chip. */
+  .stripes {
+    background: repeating-linear-gradient(135deg, theme('colors.brand.50') 0 14px, theme('colors.brand.100') 14px 15px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .stripes-sand {
+    background: repeating-linear-gradient(135deg, #efebe3 0 14px, #dcd5c6 14px 15px);
+  }
+  .stripes-coral {
+    background: repeating-linear-gradient(135deg, #f3e3dd 0 14px, #e3c8bf 14px 15px);
+  }
+  .stripes-ink {
+    background: repeating-linear-gradient(135deg, theme('colors.ink-soft') 0 14px, theme('colors.ink-line') 14px 15px);
+  }
+  .stripes-label {
+    @apply font-mono uppercase text-[10px] tracking-[0.08em] px-2 py-1 border;
+    color: theme('colors.sand-text');
+    background: theme('colors.brand.50');
+    border-color: theme('colors.brand.100');
+  }
+
+  /* ---- Card / list ---- */
+  .card {
+    @apply bg-paper border border-sand transition-colors hover:border-ink;
+  }
+
+  /* Bordered list-row used in the triage section: full-bleed buttons
+     stacked with 1px gaps showing through the dark-soft surface beneath. */
+  .triage-list {
+    @apply flex flex-col;
+    background: theme('colors.ink-soft');
+    gap: 1px;
+  }
+}
+
+@layer utilities {
+  /* Dot helper — used in pills, sticky bars, triage rows. Color and
+     halo controlled by --dot-color so a single class drives both. */
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 9999px;
+    background: var(--dot-color, theme('colors.brand.500'));
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--dot-color, theme('colors.brand.500')) 13%, transparent);
+    display: inline-block;
+    flex: none;
+  }
+  .dot-urgent { --dot-color: theme('colors.coral.300'); }
+  .dot-standard { --dot-color: theme('colors.brand.300'); }
+  .dot-live { --dot-color: #7dd3a8; }
 }
