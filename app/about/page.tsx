@@ -60,6 +60,23 @@ export default function AboutPage() {
             </ul>
           </Section>
 
+          <Section title="Partner surgeries we work with">
+            <p>
+              The matching network includes named partner surgeries across the borough alongside the wider matched-dentist pool. Two recognisable network anchors are:
+            </p>
+            <ul>
+              <li>
+                <strong>Nuffield Health Hospital Harlow</strong> (Old Harlow, CM17) — private hospital site on Rectory Lane. Routed for emergency presentations needing imaging or specialist input alongside dental treatment, and for patients who specifically prefer a hospital-environment private appointment.
+              </li>
+              <li>
+                <strong>Church Langley Dental Practice</strong> (Church Langley, CM17) — modern family-focused practice serving the village and the wider east-Harlow catchment. Routed for paediatric and family emergency presentations, and for residents who prefer the local Church Langley access point over central Harlow.
+              </li>
+            </ul>
+            <p>
+              The matched dentist for any particular enquiry depends on availability, your specific situation, and travel distance from your stated location. Named partners are part of the network, not the only practices we route to.
+            </p>
+          </Section>
+
           <Section title="What it costs you">
             <p>
               <strong>Nothing for the matching service.</strong> We are paid by the dentists in our network when an introduction leads to a booked appointment. You pay only the dentist for the treatment they provide, at their quoted fee. We add no markup, charge no commission, and never share your data outside the matched practices.

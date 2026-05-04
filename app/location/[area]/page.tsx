@@ -3,10 +3,11 @@
 import { useState } from 'react';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { ArrowRight, MapPin, AlertCircle, Briefcase } from 'lucide-react';
+import { ArrowRight, MapPin, AlertCircle, Briefcase, ShieldCheck } from 'lucide-react';
 import { AREA_HUBS, getAreaHubBySlug } from '@/data/locations';
 import { areaContent } from '@/data/areaContent';
 import { locationProfiles } from '@/data/locationProfiles';
+import { getPartnersByAreaSlug } from '@/data/partners';
 import { services } from '@/data/services';
 import { siteConfig, FAQS_LOCATION } from '@/data/site';
 import { Header } from '@/components/Header';
@@ -42,6 +43,7 @@ export default function AreaPage({ params }: { params: { area: string } }) {
 
   const ac = areaContent[hub.slug];
   const lp = locationProfiles[hub.slug];
+  const partners = getPartnersByAreaSlug(hub.slug);
   const otherAreas = AREA_HUBS.filter(a => a.slug !== hub.slug);
 
   const faqs = ac?.faqOverride ?? buildFallbackFaqs(hub.name, hub.postcode);
@@ -128,6 +130,34 @@ export default function AreaPage({ params }: { params: { area: string } }) {
                     </div>
                     <p className="text-[14px] text-ink/85 leading-relaxed">{lp.keyClinicalChallenge}</p>
                   </div>
+                </section>
+              )}
+
+              {/* Partner surgeries in this area — only renders for areas
+                  with named network partners. Sits high on the page so the
+                  credibility anchor lands before the longer prose. */}
+              {partners.length > 0 && (
+                <section className="bg-paper border border-ink/10 rounded-lg p-6 lg:p-7">
+                  <div className="flex items-center gap-2 mb-3">
+                    <ShieldCheck size={16} className="text-brand-500 flex-shrink-0" />
+                    <p className="eyebrow text-brand-700 m-0">— Partner surgery in {hub.name}</p>
+                  </div>
+                  <div className="space-y-4">
+                    {partners.map(p => (
+                      <div key={p.id}>
+                        <h3 className="font-display text-[20px] text-ink leading-tight mb-1">
+                          {p.name}
+                        </h3>
+                        <p className="text-[11px] font-mono uppercase tracking-[0.18em] text-brand-700 mb-2">
+                          {p.area}{p.postcode ? ` · ${p.postcode}` : ''}
+                        </p>
+                        <p className="text-[14px] text-ink/75 leading-relaxed">{p.description}</p>
+                      </div>
+                    ))}
+                  </div>
+                  <p className="mt-4 pt-4 border-t border-ink/10 text-[12px] text-ink/55 italic leading-relaxed">
+                    The matched dentist for any particular enquiry depends on availability and your specific situation. The named partner is part of the {hub.name} network, not the only practice we route to.
+                  </p>
                 </section>
               )}
 

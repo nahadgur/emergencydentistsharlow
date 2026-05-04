@@ -7,6 +7,7 @@ import { services } from '@/data/services';
 import { AREA_HUBS } from '@/data/locations';
 import { siteConfig, FAQS_HOME } from '@/data/site';
 import { heroContent, problemFraming, howItWorks, whyMatchingService, faqSectionTitle, ctaSection } from '@/data/homepage';
+import { PARTNERS } from '@/data/partners';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { LeadFormModal } from '@/components/LeadFormModal';
@@ -192,6 +193,53 @@ export default function HomePage() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* ─── Partner surgeries ─────────────────────────────────── */}
+        <section className="bg-paper py-16 lg:py-24">
+          <div className="container-width">
+            <div className="mb-8 max-w-2xl">
+              <p className="eyebrow mb-3">— Network anchors</p>
+              <h2 className="font-display text-[30px] lg:text-[42px] leading-tight text-ink mb-3">
+                Partner surgeries we work with in Harlow
+              </h2>
+              <p className="text-[15px] text-ink/65 leading-relaxed">
+                Named partner sites we route to alongside the wider matched-dentist network. Our matching service draws from a verified pool of GDC-registered Harlow practices — these are the recognisable names within it.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-6">
+              {PARTNERS.map(p => (
+                <div
+                  key={p.id}
+                  className="bg-white border border-ink/10 rounded-lg p-6 lg:p-7 flex flex-col"
+                >
+                  <div className="flex items-start gap-2 mb-3">
+                    <ShieldCheck size={18} className="text-brand-500 flex-shrink-0 mt-1" />
+                    <div>
+                      <h3 className="font-display text-[20px] text-ink leading-tight">{p.name}</h3>
+                      <p className="text-[11px] font-mono uppercase tracking-[0.18em] text-brand-700 mt-1">
+                        {p.area}{p.postcode ? ` · ${p.postcode}` : ''}
+                      </p>
+                    </div>
+                  </div>
+                  <p className="text-[14px] text-ink/75 leading-relaxed mb-4 flex-grow">
+                    {p.description}
+                  </p>
+                  <Link
+                    href={`/location/${p.areaSlug}/`}
+                    className="text-[12px] font-bold text-brand-600 inline-flex items-center gap-1 hover:text-brand-700"
+                  >
+                    See {p.area} coverage <ArrowRight size={11} />
+                  </Link>
+                </div>
+              ))}
+            </div>
+
+            <p className="mt-6 text-[13px] text-ink/55 max-w-2xl leading-relaxed italic">
+              The matched dentist for any particular enquiry depends on availability, your specific situation, and travel distance from your stated location. The named partners above are part of the network, not the only practices we route to.
+            </p>
           </div>
         </section>
 
