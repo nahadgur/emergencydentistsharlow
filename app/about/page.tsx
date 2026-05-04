@@ -5,10 +5,11 @@ import { Footer } from '@/components/Footer';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { siteConfig } from '@/data/site';
 
+// Title under 60 chars, description under 160 chars.
 export const metadata: Metadata = {
-  title: 'About the matching service',
+  title: 'About Our Harlow Emergency Dentist Matching',
   description:
-    'Emergency Dentists Harlow is a free matching service connecting Harlow residents with vetted GDC-registered emergency dentists. We are not a clinical service — we introduce patients to qualified professionals.',
+    'How our free matching service connects Harlow patients with vetted, GDC-registered emergency dentists. Independent referrer, not a clinical practice.',
   alternates: { canonical: '/about/' },
   robots: { index: true, follow: true },
 };

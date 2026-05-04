@@ -29,33 +29,52 @@ const mono = JetBrains_Mono({
   display: 'swap',
 });
 
+// Homepage meta — under 60 chars title, under 160 chars description.
+// The `template` covers all child pages that don't define their own
+// metadata (location/[area], services/[serviceSlug], blog/[slug]).
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} | Free Matching with Vetted GDC-Registered Dentists`,
+    default: 'Emergency Dentist Harlow — Same-Day Match · Free',
     template: `%s | ${siteConfig.name}`,
   },
-  description: siteConfig.description,
+  description:
+    'Free same-day matching with vetted, GDC-registered emergency dentists in Harlow. Toothache, abscess, knocked-out tooth, broken tooth — matched within an hour.',
   alternates: { canonical: siteConfig.url },
   robots: { index: true, follow: true },
   openGraph: {
     type: 'website',
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: siteConfig.name,
-    description: siteConfig.description,
+    title: 'Emergency Dentist Harlow — Same-Day Match · Free',
+    description:
+      'Free same-day matching with vetted, GDC-registered emergency dentists in Harlow. Toothache, abscess, knocked-out tooth, broken tooth — matched within an hour.',
     locale: 'en_GB',
   },
   twitter: {
     card: 'summary_large_image',
-    title: siteConfig.name,
-    description: siteConfig.description,
+    title: 'Emergency Dentist Harlow — Same-Day Match · Free',
+    description:
+      'Free same-day matching with vetted, GDC-registered emergency dentists in Harlow.',
   },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   // Schema graph — WebSite, Organization, and the matching Service all
   // reference each other via @id so Google reads the site as one entity.
+  //
+  // 2026-05-05: schema cleanup. We're a referral / matching service, NOT
+  // a dental practice. Claiming `Dentist` schema for the brand itself
+  // would misrepresent — Google's medical-vertical guidelines treat that
+  // as a YMYL trust violation. The right shape is:
+  //   * Organization — the matching service (us)
+  //   * Service — the matching offering, with serviceType "Emergency
+  //     dental matching and referral", areaServed Harlow, free-to-patient
+  //     offer
+  //   * WebSite — already in place
+  // Named partner clinics get their own LocalBusiness/Dentist nodes
+  // emitted only on the relevant location page where they're listed,
+  // not on the global layout.
   const websiteSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
@@ -73,7 +92,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     '@id': `${siteConfig.url}/#organization`,
     name: siteConfig.name,
     url: siteConfig.url,
+    logo: `${siteConfig.url}/logo.png`,
     description: siteConfig.description,
+    sameAs: [siteConfig.url],
     areaServed: {
       '@type': 'AdministrativeArea',
       name: siteConfig.serviceArea,
@@ -83,7 +104,42 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       '@type': 'ContactPoint',
       contactType: 'customer service',
       availableLanguage: 'English',
+      areaServed: 'GB',
     },
+  };
+
+  // The actual offering. Service rather than LocalBusiness/Dentist
+  // because the brand is a matching service; the dentists in the
+  // network are the LocalBusinesses, not us.
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `${siteConfig.url}/#service`,
+    name: 'Emergency dental matching service for Harlow',
+    serviceType: 'Emergency dental matching and referral',
+    description:
+      'Free service connecting Harlow patients with vetted, GDC-registered emergency dentists. Same-day toothache, knocked-out tooth, dental abscess, broken or chipped tooth, lost crown or filling, dental trauma, and wisdom-tooth pain triage covered.',
+    provider: { '@id': `${siteConfig.url}/#organization` },
+    areaServed: [
+      { '@type': 'AdministrativeArea', name: 'Harlow, Essex' },
+      { '@type': 'PostalAddress', addressRegion: 'Essex', postalCode: 'CM17', addressCountry: 'GB' },
+      { '@type': 'PostalAddress', addressRegion: 'Essex', postalCode: 'CM18', addressCountry: 'GB' },
+      { '@type': 'PostalAddress', addressRegion: 'Essex', postalCode: 'CM19', addressCountry: 'GB' },
+      { '@type': 'PostalAddress', addressRegion: 'Essex', postalCode: 'CM20', addressCountry: 'GB' },
+      { '@type': 'PostalAddress', addressRegion: 'Essex', postalCode: 'CM21', addressCountry: 'GB' },
+    ],
+    audience: {
+      '@type': 'PeopleAudience',
+      audienceType: 'Patients with urgent dental needs in Harlow and surrounding CM postcodes',
+    },
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'GBP',
+      availability: 'https://schema.org/InStock',
+      description: 'Free to patients. We are a referral service.',
+    },
+    isPartOf: { '@id': `${siteConfig.url}/#website` },
   };
 
   return (
@@ -91,6 +147,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       </head>
       <body className="min-h-screen flex flex-col">
         {/* GA4 only loads after the visitor accepts the cookie banner

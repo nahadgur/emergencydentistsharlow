@@ -136,6 +136,28 @@
     background: theme('colors.ink-soft');
     gap: 1px;
   }
+
+  /* ---- LSI prose helpers ---- */
+  /* Body paragraphs that carry inline <strong> LSI bolding plus
+     keyword-rich <a> internal links. Anchors render with a subtle
+     underline + teal accent so the link text reads as deliberate
+     in-paragraph navigation rather than incidental emphasis. */
+  .lsi-prose strong { @apply font-semibold text-ink; }
+  .lsi-prose a {
+    @apply text-brand-600 underline decoration-from-font underline-offset-[3px] transition-colors;
+  }
+  .lsi-prose a:hover { @apply text-brand-700; }
+
+  .lsi-prose-on-dark strong { @apply font-medium text-ink-soft-text; }
+  .lsi-prose-on-dark a {
+    @apply text-brand-300 underline decoration-from-font underline-offset-[3px] transition-colors;
+  }
+  .lsi-prose-on-dark a:hover { @apply text-brand-100; }
+
+  /* Standalone .lsi-link helper for anchors used outside a prose block. */
+  .lsi-link {
+    @apply text-brand-600 underline decoration-from-font underline-offset-[3px];
+  }
 }
 
 @layer utilities {
@@ -153,4 +175,51 @@
   .dot-urgent { --dot-color: theme('colors.coral.300'); }
   .dot-standard { --dot-color: theme('colors.brand.300'); }
   .dot-live { --dot-color: #7dd3a8; }
+
+  /* Pulsing live dot for the open-now status pill — small breathing
+     halo. Disabled under prefers-reduced-motion. */
+  .dot-pulse {
+    --dot-color: #7dd3a8;
+    animation: dot-pulse 2.4s ease-in-out infinite;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   Reveal animations.
+   `<Reveal>` adds .is-visible once the element enters the viewport;
+   the start state is opacity 0 + a small directional translate, the
+   end state is the element's natural position. Reduced-motion users
+   skip the animation entirely. */
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, 16px, 0);
+  transition:
+    opacity 600ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.reveal-left  { transform: translate3d(-24px, 0, 0); }
+.reveal-right { transform: translate3d(24px, 0, 0); }
+.reveal-fade  { transform: none; }
+.reveal.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes dot-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--dot-color, #7dd3a8) 35%, transparent); }
+  50%      { box-shadow: 0 0 0 8px color-mix(in srgb, var(--dot-color, #7dd3a8) 0%, transparent); }
+}
+
+/* Honour user preference. */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-left,
+  .reveal-right,
+  .reveal-fade {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .dot-pulse { animation: none; }
 }
