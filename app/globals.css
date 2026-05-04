@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+  body {
+    font-family: var(--font-sans), system-ui, sans-serif;
+    color: theme('colors.ink');
+    background: theme('colors.cream');
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display), Georgia, serif;
+  }
+}
+
+@layer components {
+  .container-width { @apply max-w-7xl mx-auto px-5 sm:px-6 lg:px-10; }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-md bg-brand-600 hover:bg-brand-700 text-white font-semibold text-[14px] transition-colors;
+  }
+  .btn-primary:disabled { @apply opacity-60 cursor-not-allowed; }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-md border border-ink/25 hover:border-ink hover:bg-ink hover:text-white text-ink font-semibold text-[14px] transition-colors;
+  }
+
+  .btn-on-dark {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-md bg-white text-ink hover:bg-cream font-semibold text-[14px] transition-colors;
+  }
+
+  .eyebrow {
+    @apply text-[10px] font-mono uppercase tracking-[0.22em] text-ink/55;
+  }
+
+  .card {
+    @apply bg-white border border-ink/10 rounded-lg transition-all hover:border-brand-300 hover:shadow-md;
+  }
+}
