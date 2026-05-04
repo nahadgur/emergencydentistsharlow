@@ -328,9 +328,7 @@ export default function HomePage() {
         {/* ─── Bottom CTA ────────────────────────────────────── */}
         <Reveal as="section" className="bg-ink text-ink-soft-text py-16 lg:py-24">
           <div className="container-width max-w-3xl text-center">
-            <p className="italic-accent text-brand-300 mb-3" style={{ fontSize: 'clamp(20px, 2vw, 24px)' }}>
-              Don&apos;t wait it out.
-            </p>
+            <p className="eyebrow-on-dark mb-4">— Get matched</p>
             <h2
               className="font-sans font-medium leading-[1.05] tracking-tightest mb-5"
               style={{ fontSize: 'clamp(28px, 4.4vw, 48px)' }}

@@ -11,16 +11,14 @@ export function Footer() {
   return (
     <footer className="bg-ink text-ink-mute mt-auto">
       <div className="container-width pt-14 lg:pt-16 pb-10">
-        {/* Closing emotional headline — italic serif, like the design's
-            "Don't wait it out / Call us." block, retargeted to the
-            matching-service voice. */}
+        {/* Italic-serif statement at the top of the footer. Single line,
+            site-voice (the registered tagline) rather than a mockup-
+            style emotional split. */}
         <p
-          className="italic-accent text-ink-soft-text leading-[1.05] mb-8 lg:mb-10"
-          style={{ fontSize: 'clamp(28px, 4.6vw, 44px)', letterSpacing: '-0.02em' }}
+          className="italic-accent text-ink-soft-text leading-[1.1] mb-8 lg:mb-10 max-w-3xl"
+          style={{ fontSize: 'clamp(26px, 4.2vw, 40px)', letterSpacing: '-0.02em' }}
         >
-          Free matching with vetted Harlow dentists.
-          <br />
-          <span className="text-brand-300">Tell us what hurts.</span>
+          {siteConfig.tagline}.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 lg:gap-10 text-[13px] pb-8 lg:pb-10 border-b border-ink-line">
