@@ -18,18 +18,42 @@ export function HeroLeadForm({ area, service }: Props) {
   const [error,      setError]      = useState('');
   const formRef = useRef<HTMLFormElement>(null);
 
+  function fieldIdForError(msg: string): string | null {
+    const m = msg.toLowerCase();
+    if (m.includes('name')) return 'hlf-name';
+    if (m.includes('email')) return 'hlf-email';
+    if (m.includes('phone')) return 'hlf-phone';
+    if (m.includes('service') || m.includes('emergency')) return 'hlf-svc';
+    if (m.includes('area') || m.includes('where')) return 'hlf-area';
+    if (m.includes('message') || m.includes('notes')) return 'hlf-msg';
+    return null;
+  }
+
+  function pulseField(el: HTMLElement | null) {
+    if (!el) return;
+    el.classList.remove('field-pulse');
+    void el.offsetWidth;
+    el.classList.add('field-pulse');
+    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    setTimeout(() => el.focus({ preventScroll: true }), 200);
+  }
+
   async function submit(e: React.FormEvent) {
     e.preventDefault();
 
     const form = formRef.current!;
-    const consent = (form.querySelector('#hlf-consent') as HTMLInputElement)?.checked;
-    if (!consent) {
-      setError('Please confirm your consent to continue.');
+    setError('');
+
+    if (!form.checkValidity()) {
+      const firstInvalid = form.querySelector(':invalid') as HTMLElement | null;
+      pulseField(firstInvalid);
+      const labelText =
+        firstInvalid && (firstInvalid as HTMLInputElement).labels?.[0]?.textContent?.replace(/\*$/, '').trim();
+      setError(labelText ? `Please complete: ${labelText}` : 'Please fill in the highlighted field.');
       return;
     }
 
     setSubmitting(true);
-    setError('');
 
     const payload = {
       name:    (form.querySelector('#hlf-name')    as HTMLInputElement).value.trim(),
@@ -44,9 +68,6 @@ export function HeroLeadForm({ area, service }: Props) {
 
     try {
       if (GAS_URL) {
-        // URLSearchParams = form-encoded, no CORS preflight. Apps Script
-        // reads e.parameter directly. Drop mode:'no-cors' so server-side
-        // rejections (validation errors, mis-deployment) actually surface.
         const res = await fetch(GAS_URL, {
           method: 'POST',
           body: new URLSearchParams(payload as Record<string, string>),
@@ -60,7 +81,10 @@ export function HeroLeadForm({ area, service }: Props) {
       setDone(true);
     } catch (err) {
       console.error('Lead submission failed:', err);
-      setError('Something went wrong. Please try again.');
+      const msg = err instanceof Error ? err.message : 'Something went wrong. Please try again.';
+      setError(msg);
+      const fieldId = fieldIdForError(msg);
+      if (fieldId) pulseField(form.querySelector(`#${fieldId}`) as HTMLElement | null);
     } finally {
       setSubmitting(false);
     }
@@ -96,7 +120,7 @@ export function HeroLeadForm({ area, service }: Props) {
         Matched within 60 minutes during opening hours. First thing the next morning otherwise.
       </p>
 
-      <form ref={formRef} onSubmit={submit} noValidate className="flex flex-col gap-3">
+      <form ref={formRef} onSubmit={submit} className="flex flex-col gap-3">
         <div>
           <label htmlFor="hlf-name" className={labelClass}>Your name *</label>
           <input id="hlf-name" type="text" required className={fieldClass} placeholder="e.g. Sarah Johnson" autoComplete="name" />
