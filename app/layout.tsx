@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter_Tight, Instrument_Serif, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 import { siteConfig } from '@/data/site';
@@ -42,6 +42,16 @@ export const metadata: Metadata = {
     'Free same-day matching with vetted, GDC-registered emergency dentists in Harlow. Toothache, abscess, knocked-out tooth, broken tooth — matched within an hour.',
   alternates: { canonical: siteConfig.url },
   robots: { index: true, follow: true },
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-48x48.png', sizes: '48x48', type: 'image/png' },
+    ],
+    apple: '/apple-touch-icon.png',
+  },
+  manifest: '/site.webmanifest',
   openGraph: {
     type: 'website',
     url: siteConfig.url,
@@ -50,13 +60,19 @@ export const metadata: Metadata = {
     description:
       'Free same-day matching with vetted, GDC-registered emergency dentists in Harlow. Toothache, abscess, knocked-out tooth, broken tooth — matched within an hour.',
     locale: 'en_GB',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Emergency Dental Harlow — same-day matching' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Emergency Dentist Harlow — Same-Day Match · Free',
     description:
       'Free same-day matching with vetted, GDC-registered emergency dentists in Harlow.',
+    images: ['/og-image.png'],
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: '#A84838',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -92,7 +108,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     '@id': `${siteConfig.url}/#organization`,
     name: siteConfig.name,
     url: siteConfig.url,
-    logo: `${siteConfig.url}/logo.png`,
+    logo: `${siteConfig.url}/android-chrome-512x512.png`,
     description: siteConfig.description,
     sameAs: [siteConfig.url],
     areaServed: {
