@@ -12,7 +12,7 @@ interface Props {
   defaultArea?: string;
 }
 
-const GAS_URL = '';
+const GAS_URL = 'https://script.google.com/macros/s/AKfycbzSzDG6yve8u5hrjLqOMQkm-D3a1t7YGvs5g0siH3eTmdyyTvn5J0Ov6NVuS2AojluNeA/exec';
 
 export function LeadFormModal({ isOpen, onClose, defaultService = '', defaultArea = '' }: Props) {
   const [mounted,    setMounted]    = useState(false);
@@ -85,18 +85,19 @@ export function LeadFormModal({ isOpen, onClose, defaultService = '', defaultAre
 
     try {
       if (GAS_URL) {
-        await fetch(GAS_URL, {
+        const res = await fetch(GAS_URL, {
           method: 'POST',
-          mode: 'no-cors',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload),
+          body: new URLSearchParams(payload as Record<string, string>),
         });
+        const json = await res.json().catch(() => ({ ok: false, error: 'Bad response' }));
+        if (!json.ok) throw new Error(json.error || `HTTP ${res.status}`);
       } else {
         // eslint-disable-next-line no-console
         console.warn('GAS_URL not configured — payload:', payload);
       }
       setSubmitted(true);
-    } catch {
+    } catch (err) {
+      console.error('Lead submission failed:', err);
       setError('Something went wrong. Please try again.');
     } finally {
       setSubmitting(false);

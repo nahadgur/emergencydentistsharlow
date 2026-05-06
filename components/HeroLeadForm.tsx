@@ -7,10 +7,10 @@ import { services } from '@/data/services';
 
 interface Props { area?: string; service?: string; }
 
-// Lead destination — Google Apps Script URL set up later. Until then, the
-// form posts to this placeholder which falls back to a "we'll be in touch"
-// success state via the catch handler. Replace with the live URL when ready.
-const GAS_URL = '';
+// Lead destination — Google Apps Script web app for the Harlow site.
+// Each row appended to the linked sheet; redeploy the script as a NEW
+// version on every edit (Manage Deployments -> pencil -> New version).
+const GAS_URL = 'https://script.google.com/macros/s/AKfycbzSzDG6yve8u5hrjLqOMQkm-D3a1t7YGvs5g0siH3eTmdyyTvn5J0Ov6NVuS2AojluNeA/exec';
 
 export function HeroLeadForm({ area, service }: Props) {
   const [submitting, setSubmitting] = useState(false);
@@ -44,21 +44,22 @@ export function HeroLeadForm({ area, service }: Props) {
 
     try {
       if (GAS_URL) {
-        await fetch(GAS_URL, {
+        // URLSearchParams = form-encoded, no CORS preflight. Apps Script
+        // reads e.parameter directly. Drop mode:'no-cors' so server-side
+        // rejections (validation errors, mis-deployment) actually surface.
+        const res = await fetch(GAS_URL, {
           method: 'POST',
-          mode: 'no-cors',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload),
+          body: new URLSearchParams(payload as Record<string, string>),
         });
+        const json = await res.json().catch(() => ({ ok: false, error: 'Bad response' }));
+        if (!json.ok) throw new Error(json.error || `HTTP ${res.status}`);
       } else {
-        // Lead destination not yet configured — log to console so dev can
-        // verify the payload structure. Show success to user regardless so
-        // the form is functional during pre-launch development.
         // eslint-disable-next-line no-console
         console.warn('GAS_URL not configured — payload:', payload);
       }
       setDone(true);
-    } catch {
+    } catch (err) {
+      console.error('Lead submission failed:', err);
       setError('Something went wrong. Please try again.');
     } finally {
       setSubmitting(false);
