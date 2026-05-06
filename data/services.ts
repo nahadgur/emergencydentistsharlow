@@ -9,6 +9,8 @@ export interface Service {
   urgencyTier: 'critical' | 'urgent' | 'priority';
   icon: string;
   faqs: FAQ[];
+  metaTitle: string;        // <=60 chars (brand suffix appended via layout template)
+  metaDescription: string;  // <=155 chars
 }
 
 export const services: Service[] = [
@@ -21,6 +23,9 @@ export const services: Service[] = [
       'Sharp, throbbing, or constant tooth pain that has not responded to over-the-counter painkillers. Usually caused by deep decay, pulpitis, or an early abscess. Matched dentists provide same-day pain relief and identify the underlying cause.',
     urgencyTier: 'urgent',
     icon: 'Zap',
+    metaTitle: 'Severe Toothache — Same-Day Match in Harlow',
+    metaDescription:
+      'Same-day matching for severe toothache across Harlow CM17-CM21. Pulpitis, abscess or cracked tooth diagnosed and treated at the emergency visit.',
     faqs: [
       {
         question: 'How quickly should I see a dentist for severe toothache?',
@@ -49,6 +54,9 @@ export const services: Service[] = [
       'A permanent adult tooth completely knocked out from trauma — sport, fall, or accident. The first 60 minutes are critical for re-implantation. Matched dentists prioritise these as same-day emergencies and can re-implant successfully if the tooth is preserved correctly.',
     urgencyTier: 'critical',
     icon: 'AlertTriangle',
+    metaTitle: 'Knocked-Out Tooth Emergency — Harlow',
+    metaDescription:
+      'Avulsion gets absolute priority — same-hour matching across Harlow CM17-CM21. Re-implantation, splinting and follow-up by GDC-registered dentists.',
     faqs: [
       {
         question: 'What should I do immediately if a tooth has been knocked out?',
@@ -77,6 +85,9 @@ export const services: Service[] = [
       'A tooth that has fractured, cracked, or had a piece broken off — typically from biting hard food or trauma. Severity ranges from cosmetic chip to deep fracture exposing the nerve. Matched dentists assess whether emergency treatment is needed or whether it can wait for a routine repair.',
     urgencyTier: 'urgent',
     icon: 'Slash',
+    metaTitle: 'Broken or Chipped Tooth — Same-Day Harlow Match',
+    metaDescription:
+      'Same-day matching for broken teeth across Harlow CM17-CM21. Pulp exposure or pain prioritised same day; cosmetic chips routed next-day.',
     faqs: [
       {
         question: 'Does every broken tooth need emergency treatment?',
@@ -105,6 +116,9 @@ export const services: Service[] = [
       'A filling or crown has fallen out, leaving the underlying tooth exposed. Usually painful with hot, cold, or sweet food. Not life-threatening but should be repaired within a few days to prevent further decay and protect the remaining tooth structure.',
     urgencyTier: 'priority',
     icon: 'Package',
+    metaTitle: 'Lost Filling or Crown — Harlow Same-Week Match',
+    metaDescription:
+      'Lost filling or crown matching across Harlow. Re-cement existing crowns at low cost; honest assessment when the tooth needs more than a patch.',
     faqs: [
       {
         question: 'Is a lost filling or crown a true emergency?',
@@ -133,6 +147,9 @@ export const services: Service[] = [
       'A bacterial infection causing localised pus collection — visible as a gum boil, or causing facial swelling, fever, or general feeling of being unwell. Always urgent. Spreading swelling to the eye, throat, or neck is a medical emergency requiring 999 or NHS 111, not a routine dental visit.',
     urgencyTier: 'critical',
     icon: 'AlertCircle',
+    metaTitle: 'Dental Abscess Same-Day Match in Harlow',
+    metaDescription:
+      'Localised abscess drainage and pain relief same day across Harlow CM17-CM21. Honest hospital-vs-dentist triage for any spreading infection.',
     faqs: [
       {
         question: 'When does a dental abscess become a medical emergency?',
@@ -161,6 +178,9 @@ export const services: Service[] = [
       'Genuine dental emergencies that occur outside standard clinic hours. Several Harlow dentists in our network offer Saturday morning slots, with a smaller subset covering Sundays and bank holidays. NHS 111 also maintains a free emergency dental rota for genuine out-of-hours need.',
     urgencyTier: 'urgent',
     icon: 'Moon',
+    metaTitle: 'Out-of-Hours Emergency Dentist in Harlow',
+    metaDescription:
+      'Saturday and out-of-hours emergency dental matching across Harlow. NHS 111 routing for genuine clinical urgency, private slots otherwise.',
     faqs: [
       {
         question: 'Are there emergency dentists open in Harlow on Sundays?',
@@ -189,6 +209,9 @@ export const services: Service[] = [
       'Pain, swelling, or infection around an erupting or partially-erupted wisdom tooth — most often pericoronitis, where the gum flap over the tooth becomes inflamed and infected. Common in 17–25 year olds. Matched dentists provide immediate relief and discuss whether removal is needed.',
     urgencyTier: 'urgent',
     icon: 'CircleDot',
+    metaTitle: 'Wisdom-Tooth Pain — Harlow Same-Day Relief',
+    metaDescription:
+      'Acute pericoronitis and wisdom-tooth pain matched same day across Harlow. NICE-aligned conservative advice and surgical referral when justified.',
     faqs: [
       {
         question: 'What is pericoronitis and why does it happen?',

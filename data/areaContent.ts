@@ -12,12 +12,17 @@ export interface AreaContent {
   patientProfile: { heading: string; points: string[] };
   commonTriggers: string[];
   localContext: string;
+  metaTitle: string;        // <=60 chars
+  metaDescription: string;  // <=155 chars
   faqOverride?: { question: string; answer: string }[];
 }
 
 export const areaContent: Record<string, AreaContent> = {
 
   'old-harlow': {
+    metaTitle: 'Emergency Dentist in Old Harlow (CM17)',
+    metaDescription:
+      'Same-day emergency dental matching for Old Harlow residents. CM17 conservation area, period housing, restorative-history patients prioritised.',
     heroHeading: 'Emergency dentists in Old Harlow (CM17)',
     heroParagraph:
       'Old Harlow is the historic core of the borough — a conservation area where the medieval church and Mulberry Green sit alongside independent shops on the High Street. We match Old Harlow residents and the surrounding CM17 catchment with vetted dentists handling everything from severe toothache to knocked-out teeth, usually within 60 minutes during opening hours.',
@@ -51,6 +56,9 @@ export const areaContent: Record<string, AreaContent> = {
   },
 
   'church-langley': {
+    metaTitle: 'Emergency Dentist Church Langley (CM17)',
+    metaDescription:
+      'Emergency dental matching for Church Langley residents. Modern CM17 estate, family demographic, paediatric trauma routed for same-day priority.',
     heroHeading: 'Emergency dentists in Church Langley (CM17)',
     heroParagraph:
       'Church Langley is one of the largest modern villages in Essex — a planned development that has matured over the last 25 years into a school-catchment family hub anchored by the Tesco Extra and Henry Moore School. We match Church Langley families with vetted Harlow emergency dentists, with paediatric trauma and family-of-four scheduling among the most common patterns.',
@@ -84,6 +92,9 @@ export const areaContent: Record<string, AreaContent> = {
   },
 
   'newhall': {
+    metaTitle: 'Emergency Dentist Newhall (CM17)',
+    metaDescription:
+      'Emergency dental matching for Newhall residents. Newer CM17 development, young-family demographic, paediatric and orthodontic emergencies covered.',
     heroHeading: 'Emergency dentists for Newhall residents (CM17)',
     heroParagraph:
       'Newhall is the most recently developed of Harlow\'s neighbourhoods — a contemporary mixed-use scheme that has grown around Newhall Square and Centenary Park since the early 2000s. We match Newhall residents with vetted Harlow emergency dentists, typically in Church Langley or central Harlow given Newhall\'s location on the eastern edge of town.',
@@ -117,6 +128,9 @@ export const areaContent: Record<string, AreaContent> = {
   },
 
   'sumners': {
+    metaTitle: 'Emergency Dentist Sumners (CM18)',
+    metaDescription:
+      'Emergency dental matching for Sumners residents in CM18 west Harlow. Family demographic, school-age trauma routed for priority same-day slots.',
     heroHeading: 'Emergency dentists for Sumners (CM19)',
     heroParagraph:
       'Sumners sits on the western edge of Harlow, between the town centre and Roydon. We match Sumners residents with vetted Harlow emergency dentists, with practices in central Harlow and Roydon both within easy reach.',
@@ -150,6 +164,9 @@ export const areaContent: Record<string, AreaContent> = {
   },
 
   'staple-tye': {
+    metaTitle: 'Emergency Dentist Staple Tye (CM18)',
+    metaDescription:
+      'Emergency dental matching for Staple Tye residents. CM18 mid-density family housing, working-age and school-age trauma covered same-day.',
     heroHeading: 'Emergency dentists for Staple Tye (CM18)',
     heroParagraph:
       'Staple Tye is a long-established neighbourhood on the south-western side of Harlow, anchored by the Staple Tye Shopping Centre and adjacent to Latton Bush. We match Staple Tye residents with vetted Harlow emergency dentists, with practices in central Harlow and the Latton Bush area both accessible.',
@@ -183,6 +200,9 @@ export const areaContent: Record<string, AreaContent> = {
   },
 
   'the-stow': {
+    metaTitle: 'Emergency Dentist The Stow (CM20)',
+    metaDescription:
+      'Emergency dental matching for The Stow residents. CM20 town-centre catchment, mixed demographics, denser practice landscape than outer areas.',
     heroHeading: 'Emergency dentists for The Stow (CM20)',
     heroParagraph:
       'The Stow is one of Harlow\'s original 1950s neighbourhood centres — a planned precinct anchored by the shopping centre that has served central Harlow for over 70 years. We match Stow residents with vetted central Harlow emergency dentists, typically with travel times under 10 minutes for most central addresses.',
@@ -216,6 +236,9 @@ export const areaContent: Record<string, AreaContent> = {
   },
 
   'mark-hall': {
+    metaTitle: 'Emergency Dentist Mark Hall (CM20)',
+    metaDescription:
+      'Emergency dental matching for Mark Hall residents. CM20 north-Harlow neighbourhood, established residential, broad emergency presentation mix.',
     heroHeading: 'Emergency dentists for Mark Hall (CM20)',
     heroParagraph:
       'Mark Hall is one of the original Harlow neighbourhoods, centred around First Avenue and adjacent to the town centre. We match Mark Hall residents with vetted central Harlow emergency dentists, typically with very short travel times given the central location.',
@@ -249,6 +272,9 @@ export const areaContent: Record<string, AreaContent> = {
   },
 
   'netteswell': {
+    metaTitle: 'Emergency Dentist Netteswell (CM20)',
+    metaDescription:
+      'Emergency dental matching for Netteswell residents. CM20 west-Harlow neighbourhood, established residential, school-age trauma covered same-day.',
     heroHeading: 'Emergency dentists for Netteswell (CM20)',
     heroParagraph:
       'Netteswell sits at the heart of central Harlow, adjacent to Town Park and the central commercial cluster. We match Netteswell residents with vetted Harlow emergency dentists, typically with very short travel times.',
@@ -282,6 +308,9 @@ export const areaContent: Record<string, AreaContent> = {
   },
 
   'sawbridgeworth': {
+    metaTitle: 'Emergency Dentist Sawbridgeworth (CM21)',
+    metaDescription:
+      'Emergency dental matching for Sawbridgeworth residents. CM21 market-town demographic outside Harlow, established residential, broad emergency mix.',
     heroHeading: 'Emergency dentists for Sawbridgeworth (CM21)',
     heroParagraph:
       'Sawbridgeworth is the historic Hertfordshire market town just north of Harlow — a separate town with its own character but commonly served by Harlow-area dentists for emergency cover. We match Sawbridgeworth residents with vetted dentists across the wider catchment, including practices in Harlow and the immediate Sawbridgeworth area.',
@@ -315,6 +344,9 @@ export const areaContent: Record<string, AreaContent> = {
   },
 
   'roydon': {
+    metaTitle: 'Emergency Dentist Roydon (CM19)',
+    metaDescription:
+      'Emergency dental matching for Roydon village residents. CM19 rural-edge demographic, longer-tenured families, restorative-heavy older mouths.',
     heroHeading: 'Emergency dentists for Roydon (CM19)',
     heroParagraph:
       'Roydon is the Lee Valley village just west of Harlow — a separate community with its own character but commonly served by Harlow-area dentists for emergency need. We match Roydon residents with vetted central Harlow practices, typically a 4–5 minute drive from the village.',
