@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
@@ -24,13 +25,7 @@ export function Header({ onOpenModal }: Props) {
     <header className="sticky top-0 z-30 bg-cream/95 backdrop-blur border-b border-sand-soft">
       <nav className="container-width flex items-center justify-between py-3.5" aria-label="Site navigation">
         <Link href="/" className="flex items-center gap-2.5">
-          <span
-            className="grid place-items-center text-cream font-display italic"
-            aria-hidden="true"
-            style={{ width: 26, height: 26, background: '#0f1f1c', fontSize: 18, lineHeight: 1 }}
-          >
-            e
-          </span>
+          <Image src="/logo-mark.svg" alt="" width={28} height={28} priority />
           <span className="flex flex-col leading-[1.1]">
             <span className="text-[13px] font-semibold text-ink tracking-[-0.01em]">
               Emergency Dentists

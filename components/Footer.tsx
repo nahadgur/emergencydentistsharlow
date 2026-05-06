@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { services } from '@/data/services';
 import { AREA_HUBS } from '@/data/locations';
 import { siteConfig } from '@/data/site';
@@ -25,13 +26,7 @@ export function Footer() {
           {/* Brand */}
           <div>
             <Link href="/" className="flex items-center gap-2.5 mb-4">
-              <span
-                className="grid place-items-center text-cream font-display italic"
-                aria-hidden="true"
-                style={{ width: 26, height: 26, background: '#1a2826', fontSize: 18, lineHeight: 1, border: '1px solid #2a322f' }}
-              >
-                e
-              </span>
+              <Image src="/logo-mark-white.svg" alt="" width={28} height={28} />
               <span className="flex flex-col leading-[1.1]">
                 <span className="text-[13px] font-semibold text-ink-soft-text tracking-[-0.01em]">
                   Emergency Dentists
