@@ -59,14 +59,14 @@ export default function ContactPage() {
               eyebrow="General questions"
               title="Email us"
               body="Questions about how the matching service works, complaints about a matched dentist, or feedback. We aim to respond within two working days."
-              email="hello@emergencydentistsharlow.co.uk"
+              email="hello@emergencydenstistsharlow.co.uk"
             />
 
             <Card
               eyebrow="UK GDPR data requests"
               title="Privacy and data"
               body="Subject access requests, data deletion requests, or any other UK GDPR matter. We respond within one calendar month, as the regulation requires."
-              email="privacy@emergencydentistsharlow.co.uk"
+              email="privacy@emergencydenstistsharlow.co.uk"
               footer={<>See our full <Link href="/privacy/" className="text-brand-600 underline hover:text-brand-700">privacy notice</Link> for what we collect and your rights.</>}
             />
 
@@ -74,7 +74,7 @@ export default function ContactPage() {
               eyebrow="For dentists"
               title="Join the network"
               body="GDC-registered dentists serving the Harlow CM-postcode area can apply to join the matched network. We verify GDC status, professional indemnity, and emergency-handling experience before accepting any new partner."
-              email="partners@emergencydentistsharlow.co.uk"
+              email="partners@emergencydenstistsharlow.co.uk"
             />
 
           </div>

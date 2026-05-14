@@ -1,4 +1,4 @@
-# Emergency Dentists Harlow
+﻿# Emergency Dentists Harlow
 
 > Free same-day matching with vetted, GDC-registered emergency dentists
 > across Harlow and the surrounding CM17 / CM18 / CM19 / CM20 / CM21
@@ -13,13 +13,13 @@ pays a markup.
 
 ## Emergencies covered
 
-- [Severe toothache](https://www.emergencydentistsharlow.co.uk/services/severe-toothache/): Same-day triage for sustained, sleep-disrupting tooth pain (likely pulpitis or apical periodontitis).
-- [Knocked-out tooth (avulsion)](https://www.emergencydentistsharlow.co.uk/services/knocked-out-tooth/): Time-critical replantation pathway. Same-hour matching during opening hours.
-- [Broken or chipped tooth](https://www.emergencydentistsharlow.co.uk/services/broken-or-chipped-tooth/): Sharp-edge stabilisation, restoration, or extraction depending on the fracture line.
-- [Lost filling or crown](https://www.emergencydentistsharlow.co.uk/services/lost-filling-or-crown/): Same-day re-cementation or temporary protection of the exposed dentine.
-- [Dental abscess and facial swelling](https://www.emergencydentistsharlow.co.uk/services/dental-abscess/): Drainage, antibiotic prescription where indicated, and definitive treatment of the source.
-- [Evening, weekend and bank-holiday emergencies](https://www.emergencydentistsharlow.co.uk/services/out-of-hours/): Out-of-hours pathway through partner clinics with extended-hours rotas.
-- [Wisdom tooth pain](https://www.emergencydentistsharlow.co.uk/services/wisdom-tooth-pain/): Pericoronitis triage, irrigation, and onward referral for surgical extraction where indicated.
+- [Severe toothache](https://www.emergencydenstistsharlow.co.uk/services/severe-toothache/): Same-day triage for sustained, sleep-disrupting tooth pain (likely pulpitis or apical periodontitis).
+- [Knocked-out tooth (avulsion)](https://www.emergencydenstistsharlow.co.uk/services/knocked-out-tooth/): Time-critical replantation pathway. Same-hour matching during opening hours.
+- [Broken or chipped tooth](https://www.emergencydenstistsharlow.co.uk/services/broken-or-chipped-tooth/): Sharp-edge stabilisation, restoration, or extraction depending on the fracture line.
+- [Lost filling or crown](https://www.emergencydenstistsharlow.co.uk/services/lost-filling-or-crown/): Same-day re-cementation or temporary protection of the exposed dentine.
+- [Dental abscess and facial swelling](https://www.emergencydenstistsharlow.co.uk/services/dental-abscess/): Drainage, antibiotic prescription where indicated, and definitive treatment of the source.
+- [Evening, weekend and bank-holiday emergencies](https://www.emergencydenstistsharlow.co.uk/services/out-of-hours/): Out-of-hours pathway through partner clinics with extended-hours rotas.
+- [Wisdom tooth pain](https://www.emergencydenstistsharlow.co.uk/services/wisdom-tooth-pain/): Pericoronitis triage, irrigation, and onward referral for surgical extraction where indicated.
 
 ## Areas served
 
@@ -31,12 +31,12 @@ West Essex and East Hertfordshire.
 
 ## Reference pages
 
-- [About](https://www.emergencydentistsharlow.co.uk/about/): How the matching service works and why we are not a dental practice.
-- [Services overview](https://www.emergencydentistsharlow.co.uk/services/): All emergency types we triage and what same-day care looks like.
-- [Areas overview](https://www.emergencydentistsharlow.co.uk/location/): Catchment notes by neighbourhood.
-- [Guides](https://www.emergencydentistsharlow.co.uk/blog/): Practitioner-grade writing on dental emergencies, after-hours care, and what to do before a clinic appointment.
-- [Privacy](https://www.emergencydentistsharlow.co.uk/privacy/): UK GDPR privacy notice covering enquiry data, cookies, and your rights.
-- [Contact](https://www.emergencydentistsharlow.co.uk/contact/): How to reach the matching service.
+- [About](https://www.emergencydenstistsharlow.co.uk/about/): How the matching service works and why we are not a dental practice.
+- [Services overview](https://www.emergencydenstistsharlow.co.uk/services/): All emergency types we triage and what same-day care looks like.
+- [Areas overview](https://www.emergencydenstistsharlow.co.uk/location/): Catchment notes by neighbourhood.
+- [Guides](https://www.emergencydenstistsharlow.co.uk/blog/): Practitioner-grade writing on dental emergencies, after-hours care, and what to do before a clinic appointment.
+- [Privacy](https://www.emergencydenstistsharlow.co.uk/privacy/): UK GDPR privacy notice covering enquiry data, cookies, and your rights.
+- [Contact](https://www.emergencydenstistsharlow.co.uk/contact/): How to reach the matching service.
 
 ## Clinical scope and safety
 
