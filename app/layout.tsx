@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     description:
       'Free same-day matching with vetted, GDC-registered emergency dentists in Harlow. Toothache, abscess, knocked-out tooth, broken tooth — matched within an hour.',
     locale: 'en_GB',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Emergency Dental Harlow — same-day matching' }],
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Emergency Dentists Harlow same-day matching' }],
   },
   twitter: {
     card: 'summary_large_image',
