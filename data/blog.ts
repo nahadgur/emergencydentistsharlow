@@ -56,6 +56,10 @@ export const blogArticles: BlogArticle[] = [
       { type: 'p', text: 'Submit our matching form marked "knocked-out tooth" or call NHS 111 if you are out of normal hours. Avulsion calls bypass any normal queueing in our matching service — we aim to confirm a Harlow practice within 15 minutes during opening hours.' },
       { type: 'p', text: 'The dentist will clean the tooth and socket, re-implant if not already in place, splint the tooth to its neighbours for 1–2 weeks, prescribe antibiotics, and check tetanus status. Follow-up appointments monitor whether the tooth is taking root or being rejected.' },
 
+      { type: 'h2', text: 'Getting a knocked-out tooth seen in Harlow' },
+      { type: 'p', text: 'For the tooth itself, speed matters more than distance: re-implant it or store it in milk and head for the first available dentist. During the day we aim to confirm a practice across Harlow and the surrounding CM postcodes, from Old Harlow and Church Langley to Staple Tye and Sawbridgeworth. Out of hours, NHS 111 directs you to the local urgent dental rota, which in this area can sit in Harlow, Bishop\'s Stortford or Epping.' },
+      { type: 'p', text: 'If the knock-out came with a heavier facial injury, deep cuts, a possible broken jaw, or bleeding you cannot control with pressure, that is an A&E matter rather than a dental one. The nearest emergency department is at Princess Alexandra Hospital on Hamstel Road in Harlow. Take the tooth with you in milk so a dentist can still attempt re-implantation afterwards.' },
+
       { type: 'h2', text: 'A different rule for baby teeth' },
       { type: 'p', text: 'If a child knocks out a baby (deciduous) tooth, do NOT try to re-insert it. Re-implanting a baby tooth risks damaging the developing adult tooth in the bone underneath. The child still needs an emergency dental check — the dentist will examine the socket for retained fragments, check for damage to the adult tooth bud, and manage pain. Bring the tooth so the dentist can confirm it is whole.' },
 
@@ -114,6 +118,10 @@ export const blogArticles: BlogArticle[] = [
       ] },
       { type: 'p', text: 'Spreading orofacial infection is a medical emergency requiring hospital admission, not a paid private dental visit. The matching service is for dental-only emergencies; call 111 or 999 for spreading infection signs.' },
 
+      { type: 'h2', text: 'Getting seen in Harlow while you wait' },
+      { type: 'p', text: 'Painkillers buy you time, not a cure. During opening hours our matching service looks for the soonest slot across Harlow and the nearby CM postcodes, including Church Langley, Newhall, The Stow and Sawbridgeworth. Out of hours, NHS 111 books the local urgent dental rota, which may place you in Harlow, Bishop\'s Stortford or Epping depending on who is on call.' },
+      { type: 'p', text: 'If the toothache is joined by spreading facial swelling, trouble swallowing or breathing, or a high fever, do not wait for a dental slot. The emergency department at Princess Alexandra Hospital on Hamstel Road in Harlow handles spreading dental infection, which is the right route when painkillers and a routine appointment are no longer enough.' },
+
       { type: 'h2', text: 'Why the dentist visit matters even after symptoms settle' },
       { type: 'p', text: 'Severe toothache that "settles by itself" is rarely good news. Most often it means the nerve has died and stopped sending pain signals — the underlying decay or infection is still progressing, just silently. Three weeks later it returns as an abscess or facial swelling. The matching service introduces you to a dentist who will diagnose the cause whether the pain has settled or not.' },
     ],
@@ -170,7 +178,7 @@ export const blogArticles: BlogArticle[] = [
     title: 'Recognising a dental abscess vs routine toothache',
     metaTitle: 'Dental Abscess vs Toothache: Symptoms Guide',
     metaDescription:
-      'How to tell a dental abscess from routine toothache. Warning signs, when to call 999 or NHS 111, and what an emergency dentist will do for an abscess.',
+      'How to tell a dental abscess from routine toothache, the warning signs, when to call 999 or NHS 111, and how to get an abscess seen by an emergency dentist in Harlow.',
     category: 'Emergency basics',
     publishDate: '2026-05-04',
     excerpt:
@@ -211,6 +219,10 @@ export const blogArticles: BlogArticle[] = [
         'Generally feeling very unwell — confused, severely tired, dizzy on standing',
       ] },
       { type: 'p', text: 'These presentations need IV antibiotics in hospital, sometimes airway protection, and urgent surgical drainage. They are uncommon — most dental abscesses do not progress this far — but when they do, the progression is fast and the outcome depends on early hospital admission. The matching service will tell you immediately if your symptoms suggest hospital care rather than dental care.' },
+
+      { type: 'h2', text: 'Where to get a dental abscess seen in Harlow' },
+      { type: 'p', text: 'A localised abscess needs same-day dental care. During the day we match you to a Harlow practice with capacity, covering Old Harlow, Mark Hall, Staple Tye, Sumners and the villages out to Roydon and Sawbridgeworth. Outside practice hours, NHS 111 routes you to the west Essex urgent dental rota, which can be based in Harlow, Bishop\'s Stortford or Epping.' },
+      { type: 'p', text: 'The picture changes the moment the infection looks like it is spreading. Swelling tracking towards the eye or down the neck, difficulty swallowing or breathing, or a high fever with chills is a hospital problem. Go to the emergency department at Princess Alexandra Hospital on Hamstel Road in Harlow, or call 999, rather than waiting for a dentist.' },
 
       { type: 'h2', text: 'What about antibiotics from a GP?' },
       { type: 'p', text: 'GPs are increasingly reluctant to prescribe antibiotics for dental abscess because antibiotics alone do not cure the infection — the source (the dead nerve, the infected socket) is still present, and the abscess returns once the antibiotic course finishes. Only the dentist can address the source through drainage and definitive treatment. The matching service connects you with a dentist who can do both — drain the acute abscess and start the definitive treatment plan.' },
