@@ -67,10 +67,10 @@ export default function AboutPage() {
             </p>
             <ul>
               <li>
-                <strong>Nuffield Health Hospital Harlow</strong> (Old Harlow, CM17) — private hospital site on Rectory Lane. Routed for emergency presentations needing imaging or specialist input alongside dental treatment, and for patients who specifically prefer a hospital-environment private appointment.
+                <strong>Nuffield Dental Practice</strong> (The Stow, CM20): established practice at The Stow in central Harlow, with parking in the precinct and bus routes from the town centre. Takes NHS and private patients, and is routed for emergency presentations across central and western Harlow.
               </li>
               <li>
-                <strong>Church Langley Dental Practice</strong> (Church Langley, CM17) — modern family-focused practice serving the village and the wider east-Harlow catchment. Routed for paediatric and family emergency presentations, and for residents who prefer the local Church Langley access point over central Harlow.
+                <strong>Church Langley Dental</strong> (Church Langley, CM17): family practice on the first floor of the Florence Nightingale Health Centre, with parking on site and Saturday appointments. Takes NHS and private patients, and is routed for family and paediatric emergency presentations across east Harlow.
               </li>
             </ul>
             <p>

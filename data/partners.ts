@@ -26,21 +26,21 @@ export interface Partner {
 
 export const PARTNERS: Partner[] = [
   {
-    id: 'nuffield-health-harlow',
-    name: 'Nuffield Health Hospital Harlow',
-    area: 'Old Harlow',
-    areaSlug: 'old-harlow',
+    id: 'nuffield-dental-harlow',
+    name: 'Nuffield Dental Practice',
+    area: 'The Stow',
+    areaSlug: 'the-stow',
     description:
-      'Private hospital site on Rectory Lane in Old Harlow. Routed for emergency presentations needing imaging or specialist input alongside dental treatment, and for patients who specifically prefer a hospital-environment private appointment.',
-    postcode: 'CM17',
+      'Established practice at The Stow in central Harlow, with parking in the precinct and bus routes from the town centre. Takes NHS and private patients, and is routed for emergency presentations across central and western Harlow.',
+    postcode: 'CM20',
   },
   {
     id: 'church-langley-dental',
-    name: 'Church Langley Dental Practice',
+    name: 'Church Langley Dental',
     area: 'Church Langley',
     areaSlug: 'church-langley',
     description:
-      'Modern family-focused practice serving the Church Langley village and the wider east-Harlow catchment. Routed for paediatric and family emergency presentations, and for residents who prefer the local Church Langley access point over central Harlow.',
+      'Family practice on the first floor of the Florence Nightingale Health Centre in Church Langley, with parking on site and Saturday appointments. Takes NHS and private patients, and is routed for family and paediatric emergency presentations across east Harlow.',
     postcode: 'CM17',
   },
 ];
