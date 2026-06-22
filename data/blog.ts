@@ -236,6 +236,34 @@ export const blogArticles: BlogArticle[] = [
       ] },
     ],
   },
+  {
+    slug: 'what-to-do-if-a-filling-falls-out',
+    title: 'What to do if a filling falls out',
+    metaTitle: 'Lost a Filling? What to Do Before You Are Seen',
+    metaDescription: 'A filling has come out: how to protect the tooth, ease the sensitivity, what to avoid, when it is urgent, and how to get seen quickly by a dentist in Harlow.',
+    category: 'Emergency basics',
+    publishDate: '2026-06-22',
+    excerpt: 'A lost filling is rarely a true emergency, but the exposed tooth needs protecting before a small problem becomes a bigger one. Here is what to do, and how to get seen in Harlow.',
+    content: [
+      { type: 'p', text: "A filling coming out is one of the most common dental problems, and the good news is that it is rarely a true emergency. It usually causes more alarm than pain at first, because the cavity underneath is suddenly exposed. The priority is to protect the tooth, manage any sensitivity, and get it seen before a small problem turns into a bigger one. This guide covers what to do in the first hour, what to avoid, and how to get seen in Harlow." },
+      { type: 'h2', text: 'Do not panic, but do not ignore it' },
+      { type: 'p', text: "A lost filling leaves the inner part of the tooth open to temperature, food and bacteria, which is why a tooth can suddenly feel sensitive to hot, cold or sweet things. That sensitivity is uncomfortable but not dangerous. What matters is not leaving the tooth exposed for weeks, because the cavity can deepen, and what would have been a simple refill can become a root canal or an extraction. Treat it as something to sort within a few days rather than the same evening, unless you are in severe pain or there is swelling." },
+      { type: 'h2', text: 'What to do in the first hour' },
+      { type: 'list', items: [
+        'Rinse gently with warm salt water to clear any debris from the cavity.',
+        'Keep the filling if you find it, but do not try to glue it back yourself; a dentist needs to refit or replace it properly.',
+        'Cover the cavity with a temporary dental filling material from a pharmacy to protect it for a few days until you are seen.',
+        'Avoid chewing on that side, and steer clear of very hot, cold, sweet or hard foods that trigger the sensitivity.',
+        'Manage any discomfort with your usual over-the-counter painkiller, taken as directed on the packet.',
+      ] },
+      { type: 'h2', text: 'When a lost filling is more urgent' },
+      { type: 'p', text: "Most lost fillings can wait a day or two for an appointment. Treat it as more urgent if you have severe or throbbing pain, a swelling in the gum or face, a bad taste or discharge, or a large piece of tooth has broken away with the filling. Those can signal that decay or infection has reached the nerve, which is covered in our guide to [managing severe toothache before you can be seen](/blog/managing-severe-toothache-before-you-can-be-seen/). If there is facial swelling that is spreading, or any difficulty swallowing or breathing, treat it as a medical emergency: in Harlow that means the A&E department at Princess Alexandra Hospital on Hamstel Road, or call 999." },
+      { type: 'h2', text: 'Getting seen in Harlow' },
+      { type: 'p', text: "During the day, your own dentist is the first call if you have one. If you do not, or you cannot get in quickly, out of hours and at weekends NHS 111 can assess you and direct you to urgent NHS dental care through the west Essex rota that covers Harlow and the surrounding CM postcodes, from Old Harlow and Church Langley to Staple Tye and Bush Fair. The [NHS guidance on dental problems](https://www.nhs.uk/nhs-services/dentists/) explains the routes, and whether NHS or private is the quicker option for you is set out in our guide to [NHS versus private emergency dental care in Harlow](/blog/nhs-vs-private-emergency-dental-harlow/)." },
+      { type: 'p', text: "For impartial advice while you wait, the Oral Health Foundation runs a free, independent [dental helpline](https://www.dentalhealth.org/dental-helpline) that can talk you through looking after the tooth until your appointment." },
+      { type: 'p', text: "If a filling has come out and you want to be seen quickly in Harlow, tell us what happened using the form on this page and we will match you with a local dentist who can refit or replace it. We are an independent matching service and do not treat you ourselves." },
+    ],
+  },
 ];
 
 export const getArticleBySlug = (slug: string): BlogArticle | undefined =>

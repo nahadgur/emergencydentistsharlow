@@ -13,6 +13,25 @@ import { HeroLeadForm } from '@/components/HeroLeadForm';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { EmergencyDisclaimer } from '@/components/EmergencyDisclaimer';
 import { buildBreadcrumbSchema } from '@/lib/breadcrumbs';
+import type { ReactNode } from 'react';
+
+function renderInline(text: string): ReactNode[] {
+  const out: ReactNode[] = [];
+  const re = /\[([^\]]+)\]\(([^)]+)\)/g;
+  let last = 0; let m: RegExpExecArray | null; let k = 0;
+  while ((m = re.exec(text)) !== null) {
+    if (m.index > last) out.push(text.slice(last, m.index));
+    const label = m[1]; const href = m[2];
+    if (href.startsWith('/')) {
+      out.push(<Link key={`il-${k++}`} href={href} className="text-urgent-700 underline underline-offset-2 hover:text-urgent-800">{label}</Link>);
+    } else {
+      out.push(<a key={`il-${k++}`} href={href} target="_blank" rel="noopener noreferrer" className="text-urgent-700 underline underline-offset-2 hover:text-urgent-800">{label}</a>);
+    }
+    last = re.lastIndex;
+  }
+  if (last < text.length) out.push(text.slice(last));
+  return out;
+}
 
 function renderBlock(block: ContentBlock, i: number) {
   switch (block.type) {
@@ -31,13 +50,13 @@ function renderBlock(block: ContentBlock, i: number) {
     case 'p':
       return (
         <p key={i} className="text-[15.5px] text-ink/80 leading-relaxed mb-4">
-          {block.text}
+          {renderInline(block.text ?? '')}
         </p>
       );
     case 'list':
       return (
         <ul key={i} className="list-disc pl-6 space-y-2 mb-5 text-[15px] text-ink/80 leading-relaxed">
-          {block.items?.map((item, j) => <li key={j}>{item}</li>)}
+          {block.items?.map((item, j) => <li key={j}>{renderInline(item)}</li>)}
         </ul>
       );
     case 'note':
@@ -45,7 +64,7 @@ function renderBlock(block: ContentBlock, i: number) {
         <div key={i} className="bg-urgent-50 border-l-4 border-urgent-500 rounded-md p-4 my-6">
           <div className="flex items-start gap-3">
             <AlertCircle size={16} className="text-urgent-600 flex-shrink-0 mt-0.5" />
-            <p className="text-[14px] text-ink/85 leading-relaxed">{block.text}</p>
+            <p className="text-[14px] text-ink/85 leading-relaxed">{renderInline(block.text ?? '')}</p>
           </div>
         </div>
       );
