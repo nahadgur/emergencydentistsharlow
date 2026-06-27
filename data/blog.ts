@@ -264,6 +264,46 @@ export const blogArticles: BlogArticle[] = [
       { type: 'p', text: "If a filling has come out and you want to be seen quickly in Harlow, tell us what happened using the form on this page and we will match you with a local dentist who can refit or replace it. We are an independent matching service and do not treat you ourselves." },
     ],
   },
+  {
+    slug: 'childrens-dental-emergencies-what-parents-should-do-harlow',
+    title: "Children's Dental Emergencies: What Parents Should Do in Harlow",
+    metaTitle: "Children's Dental Emergencies: A Parent's Guide (Harlow)",
+    metaDescription:
+      "A calm, practical guide for parents in Harlow: knocked-out baby vs adult teeth, night toothache, chipped teeth, bitten lips, and swelling. First aid steps and when to seek urgent care.",
+    category: 'Trauma & first aid',
+    publishDate: '2026-06-27',
+    excerpt:
+      "Children knock teeth, chip them and wake with toothache at the worst hours. Here is what to do first, what is genuinely urgent, and how to get a child seen in Harlow. NHS dental care is free for under-18s.",
+    content: [
+      { type: 'p', text: "A dental emergency in a small child is frightening for everyone in the room, and a frightened child makes calm decisions harder. The reassuring part is that most childhood dental injuries look far worse than they are, and the few that are genuinely time-critical have simple first steps you can take at home. This guide walks through the common ones, what to do in the first few minutes, and when a child needs to be seen urgently in Harlow. One thing worth knowing up front: NHS dental care is free for everyone under 18, so cost should never be the reason you delay getting a child checked." },
+
+      { type: 'h2', text: 'Knocked-out tooth: baby and adult teeth are treated very differently' },
+      { type: 'p', text: "The single most important thing to work out is whether the tooth that came out is a baby (milk) tooth or an adult (permanent) one, because the right action is opposite for each. Most children start losing baby teeth naturally from around age six and have their front adult teeth through by about eight, so a knocked-out tooth in a younger child is almost always a baby tooth, while in an older child or teenager it is more likely to be a permanent one." },
+      { type: 'p', text: "If it is a baby tooth, do not try to push it back in. Re-implanting a baby tooth can damage the developing adult tooth sitting in the bone above it. Keep the child calm, control any bleeding with gentle pressure from clean gauze or a clean cloth, and arrange a dental check so the socket can be examined and the adult tooth bud assessed." },
+      { type: 'p', text: "If it is an adult tooth, the clock matters. Hold it by the white crown, never the root, rinse it briefly in milk only if it is dirty, and if your child is old enough to cooperate, gently slot it back into the socket and have them bite on a clean cloth. If you cannot re-insert it, store it in milk and get to a dentist fast. The full minute-by-minute method is set out in our guide to [what to do if you knock out a tooth](/blog/what-to-do-if-you-knock-out-a-tooth/), and it is worth reading before you ever need it." },
+      { type: 'note', text: "Quick rule: baby tooth knocked out, leave it out and see a dentist. Adult tooth knocked out, keep it in milk or back in the socket and get seen within the hour." },
+
+      { type: 'h2', text: 'Toothache, especially the kind that strikes at night' },
+      { type: 'p', text: "Toothache has a habit of arriving at bedtime, partly because lying down increases blood flow to the head and partly because there are fewer distractions once the lights are off. For a child in pain overnight, you can give a children's painkiller such as paracetamol or ibuprofen at the dose for their age and weight printed on the bottle, never adult tablets or aspirin, which is not suitable for under-16s. Propping them up on an extra pillow, a cool drink of water, and a warm salt-water rinse for an older child who can spit reliably all help take the edge off." },
+      { type: 'p', text: "Painkillers buy comfort, not a cure. Persistent or severe toothache in a child means something needs treating, so book a dental appointment rather than riding it out night after night. The same calming measures that help adults are covered in more detail in our guide to [managing severe toothache before you can be seen](/blog/managing-severe-toothache-before-you-can-be-seen/), and the children's dosing advice on the [NHS toothache page](https://www.nhs.uk/conditions/toothache/) is a reliable place to double-check amounts." },
+
+      { type: 'h2', text: 'Chipped or broken tooth' },
+      { type: 'p', text: "A chipped tooth is one of the most common playground and sports injuries, and a small chip is rarely an emergency. Rinse the mouth with warm water, find the fragment if you can and keep it in milk in case the dentist can bond it back, and use a cold compress on the cheek if there is swelling or bruising. A jagged edge can be covered with a small piece of orthodontic wax or sugar-free chewing gum to stop it catching the tongue or lip until you are seen." },
+      { type: 'p', text: "Treat a break as more urgent if a large piece has come away, if you can see a pink or red dot in the middle of the tooth where the nerve is exposed, or if the tooth is loose, pushed out of position or very painful to touch. Those need same-day dental attention. A minor chip with no pain can usually wait for a routine appointment, but still gets checked so a hidden crack does not turn into a bigger problem later." },
+
+      { type: 'h2', text: 'Bitten lip, tongue or cheek that will not stop bleeding' },
+      { type: 'p', text: "Falls and knocks often cut the lip or tongue rather than the teeth, and the mouth has a rich blood supply, so even a small cut can bleed dramatically and look alarming. Clean your hands, then press a clean piece of gauze or a clean cloth firmly over the bleeding point for around ten minutes without lifting it to peek, as that restarts the bleeding. A cold compress or a wrapped ice cube held against the outside of the lip helps slow the flow and brings down swelling." },
+      { type: 'p', text: "Most mouth cuts settle within ten to fifteen minutes of steady pressure. Seek urgent care if the bleeding does not slow after fifteen minutes of firm pressure, if the cut is deep or gaping and might need stitches, if it goes right through the lip, or if the injury came with a heavy blow to the head. For a wound that needs stitching or any serious head injury, the emergency department at Princess Alexandra Hospital on Hamstel Road in Harlow is the right place, or call 999." },
+
+      { type: 'h2', text: 'Facial swelling: the one to take seriously' },
+      { type: 'p', text: "Swelling of the gum, cheek or face in a child usually points to a dental infection, and unlike the injuries above it tends to need prompt attention rather than watchful waiting. A small gum swelling near one tooth with mild discomfort should be seen the same day or the next day. The picture becomes urgent when swelling spreads across the face, tracks towards the eye or down towards the neck, or comes with a fever, because infection in a child can move faster than in an adult." },
+      { type: 'p', text: "If your child has facial swelling spreading towards the eye or neck, any difficulty swallowing or breathing, or a high fever with it, do not wait for a dental appointment. Call 999 or NHS 111, or go straight to the emergency department, as spreading infection is a hospital matter. The warning signs and the line between a dental problem and a medical one are explained more fully in our guide to [recognising a dental abscess](/blog/recognising-a-dental-abscess-vs-routine-toothache/)." },
+
+      { type: 'h2', text: 'Getting a child seen in Harlow' },
+      { type: 'p', text: "In the daytime your own dentist is the first call, and NHS dental treatment is free for under-18s, so there is no charge to weigh up. If you do not have a dentist or cannot get in quickly, NHS 111 can assess your child out of hours and direct you to urgent NHS dental care through the west Essex rota covering Harlow and the surrounding CM postcodes, from Old Harlow and Church Langley to Staple Tye and Sawbridgeworth. For general reassurance about looking after children's teeth and what counts as urgent, the [Oral Health Foundation](https://www.dentalhealth.org/) runs a free, independent dental helpline staffed by qualified professionals." },
+      { type: 'p', text: "If your child has had a dental injury and you want them seen quickly in Harlow, tell us what happened using the form on this page and we will match you with a local dentist. We are an independent matching service and do not treat children ourselves, so for anything involving heavy bleeding, a serious head injury, spreading facial swelling or trouble breathing, go straight to 999 or A&E first." },
+    ],
+  },
 ];
 
 export const getArticleBySlug = (slug: string): BlogArticle | undefined =>
