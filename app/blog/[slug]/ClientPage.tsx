@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { ArrowRight, Clock, AlertCircle } from 'lucide-react';
-import { getArticleBySlug, publishedArticles, ContentBlock } from '@/data/blog';
+import { getArticleBySlug, blogArticles, ContentBlock } from '@/data/blog';
 import { siteConfig } from '@/data/site';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
@@ -78,7 +78,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
   const article = getArticleBySlug(params.slug);
   if (!article) notFound();
 
-  const others = publishedArticles().filter(a => a.slug !== article.slug).slice(0, 3);
+  const others = blogArticles.filter(a => a.slug !== article.slug).slice(0, 3);
 
   const breadcrumbSchema = buildBreadcrumbSchema([
     { name: 'Guides',     url: '/blog/' },
