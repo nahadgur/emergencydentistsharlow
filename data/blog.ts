@@ -18,6 +18,10 @@ export interface BlogArticle {
   publishDate: string;
   excerpt: string;
   content: ContentBlock[];
+  // Draft posts are excluded from the static params, sitemap, index and
+  // sidebar, so they 404 in production and are never indexed. They still
+  // resolve by slug in `next dev` if visited directly.
+  draft?: boolean;
 }
 
 export const blogArticles: BlogArticle[] = [
@@ -304,9 +308,67 @@ export const blogArticles: BlogArticle[] = [
       { type: 'p', text: "If your child has had a dental injury and you want them seen quickly in Harlow, tell us what happened using the form on this page and we will match you with a local dentist. We are an independent matching service and do not treat children ourselves, so for anything involving heavy bleeding, a serious head injury, spreading facial swelling or trouble breathing, go straight to 999 or A&E first." },
     ],
   },
+  {
+    slug: 'broken-or-chipped-tooth-what-to-do',
+    title: 'Broken or Chipped a Tooth? What to Do Now',
+    metaTitle: 'Broken or Chipped Tooth: First Aid Before You Are Seen',
+    metaDescription:
+      'What to do in the first hour after breaking or chipping a tooth in Harlow: keeping the fragment, easing sensitivity, protecting a sharp edge, and when a break is genuinely urgent.',
+    category: 'Emergency basics',
+    publishDate: '2026-07-02',
+    draft: true,
+    excerpt:
+      'A chipped or broken tooth is alarming but rarely a true emergency. Here is what to do in the first hour, how to tell a cosmetic chip from an urgent break, and how to get seen in Harlow.',
+    content: [
+      { type: 'p', text: "Breaking or chipping a tooth usually happens without warning, from biting down on something hard, a knock during sport, or a fall. The first reaction is often panic, especially when it is a front tooth or the edge feels jagged against the tongue. The reassuring part is that most chips and breaks are not true emergencies and can be repaired well once you are seen. What matters in the first hour is protecting the tooth, judging how serious the break is, and keeping any broken piece in case it can be reattached." },
+
+      { type: 'h2', text: 'What to do in the first hour' },
+      { type: 'p', text: "The steps below apply whether you have lost a small corner or a larger section of the tooth. They protect the exposed surface and give a dentist the best chance of a clean repair." },
+      { type: 'list', items: [
+        'Rinse your mouth gently with warm water to clear away any fragments and see what has happened.',
+        'If a piece has broken off, keep it and store it in milk or your own saliva, not water and not dry in a tissue. A larger fragment, especially from a front tooth, can sometimes be bonded back on for the best cosmetic result.',
+        'Press a clean piece of gauze or a clean cloth on any bleeding gum for around ten minutes without lifting it to check.',
+        'Hold a cold compress against the cheek over the area to ease swelling and pain.',
+        'Cover a sharp or jagged edge with a small piece of orthodontic wax or sugar-free chewing gum so it does not cut your tongue or lip until you are seen.',
+        'Take your usual over-the-counter painkiller as directed on the packet if the tooth is sore.',
+      ] },
+      { type: 'p', text: "The advice to keep the broken piece in milk mirrors the rule for a tooth that has come out completely. If the whole tooth has been knocked out rather than chipped, that is a different and more time-critical situation, and the minute-by-minute steps are set out in our guide to [what to do if you knock out a tooth](/blog/what-to-do-if-you-knock-out-a-tooth/)." },
+
+      { type: 'h2', text: 'Telling a minor chip from an urgent break' },
+      { type: 'p', text: "Not every broken tooth needs to be seen the same day. The severity depends on how deep the break goes and whether the inner layers of the tooth are exposed. A tooth has a hard outer enamel layer, a softer dentine layer beneath it, and a living pulp at the centre that holds the nerve and blood supply." },
+      { type: 'p', text: "A small chip in the enamel with no pain and no sharp edge is usually cosmetic and can wait a few days for a routine repair. A deeper break becomes more urgent when the dentine is exposed, which typically shows as sensitivity to hot, cold or sweet things. It becomes a same-day matter when the pulp is exposed, which means severe pain and sometimes a visible pink or red dot in the middle of the tooth. A tooth that is loose, pushed out of position, or bleeding from within is also one to have looked at quickly." },
+      { type: 'note', text: "See a dentist the same day if the tooth is very painful, sensitive to temperature, loose, or shows a pink or red dot at its centre. A painless chip with a smooth edge can usually wait for a routine appointment." },
+      { type: 'p', text: "There is also the cracked tooth that does not visibly break. Pain that flares when you bite and fades when you release the pressure can point to a crack running into the tooth, which lets bacteria reach the pulp over time. It needs examining even without an obvious chip. The [NHS guidance on a chipped, broken or cracked tooth](https://www.nhs.uk/conditions/chipped-broken-or-cracked-tooth/) is a useful reference for what a dentist can do, from bonding and fillings to a crown or root canal for a deeper fracture." },
+
+      { type: 'h2', text: 'What to avoid' },
+      { type: 'list', items: [
+        'Do not try to file or smooth a sharp edge yourself. You risk weakening the tooth further or cutting your mouth.',
+        'Do not glue the fragment back with household or superglue. It is toxic in the mouth and prevents a proper repair.',
+        'Do not chew on the broken side, which can crack the tooth further or dislodge more of it.',
+        'Do not ignore a painless break for weeks. An exposed surface lets decay and infection set in, turning a simple repair into a bigger treatment.',
+      ] },
+      { type: 'p', text: "If the break is causing steady throbbing pain rather than sharp sensitivity, the measures that help with any dental pain apply, and our guide to [managing severe toothache before you can be seen](/blog/managing-severe-toothache-before-you-can-be-seen/) covers the painkiller combination that works best while you wait. A break that has taken a filling with it needs the same protection as any [lost filling](/blog/what-to-do-if-a-filling-falls-out/), so the exposed cavity does not deepen." },
+
+      { type: 'h2', text: 'When a break is a medical emergency' },
+      { type: 'p', text: "A chipped or broken tooth on its own is a dental problem, not a medical one. It becomes a hospital matter when it comes with a heavier injury: a possible broken jaw, a deep cut that may need stitches, a serious blow to the head, or bleeding you cannot control with steady pressure. In those cases the emergency department at Princess Alexandra Hospital on Hamstel Road in Harlow is the right place, or call 999. Facial swelling that is spreading, or any difficulty swallowing or breathing, is also a 999 or A&E situation rather than something to wait for a dental appointment." },
+      { type: 'p', text: "For a child who has broken a tooth, the same rules apply but with less cost pressure, because NHS dental care is free for under-18s. The wider first-aid picture for younger patients, including chipped teeth and knocks during play, is covered in our guide to [children's dental emergencies in Harlow](/blog/childrens-dental-emergencies-what-parents-should-do-harlow/)." },
+
+      { type: 'h2', text: 'Getting a broken tooth seen in Harlow' },
+      { type: 'p', text: "During the day your own dentist is the first call if you have one. If you do not, or you cannot get in quickly, our [broken or chipped tooth matching service](/services/broken-or-chipped-tooth/) can pair you with a local practice, prioritising a same-day slot where the tooth is painful or the nerve is exposed and routing a simple cosmetic chip to a next-day repair. Out of hours and at weekends, NHS 111 can assess you and direct you to urgent NHS dental care through the west Essex rota that covers Harlow and the surrounding CM postcodes, from Old Harlow and Church Langley to Staple Tye and Sawbridgeworth. Whether the NHS or private route gets you seen sooner is set out in our guide to [NHS versus private emergency dental care in Harlow](/blog/nhs-vs-private-emergency-dental-harlow/)." },
+      { type: 'p', text: "If you want impartial advice while you decide, the Oral Health Foundation runs a free, independent [dental helpline](https://www.dentalhealth.org/dental-helpline) staffed by qualified professionals who can talk you through looking after the tooth until your appointment. When you are ready to be seen quickly in Harlow, tell us what happened using the form on this page and we will match you with a local dentist. We are an independent matching service and do not treat you ourselves." },
+    ],
+  },
 ];
 
 export const getArticleBySlug = (slug: string): BlogArticle | undefined =>
   blogArticles.find(a => a.slug === slug);
 
-export const getAllBlogSlugs = (): string[] => blogArticles.map(a => a.slug);
+// Published posts only: drives the index, the sidebar and the sitemap so
+// drafts never appear or get indexed.
+export const publishedArticles = (): BlogArticle[] =>
+  blogArticles.filter(a => !a.draft);
+
+// Static params exclude drafts, so a draft slug is not pre-rendered and 404s
+// in production.
+export const getAllBlogSlugs = (): string[] =>
+  publishedArticles().map(a => a.slug);

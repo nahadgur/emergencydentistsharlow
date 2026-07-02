@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { ArrowRight, Clock } from 'lucide-react';
-import { blogArticles } from '@/data/blog';
+import { publishedArticles } from '@/data/blog';
 import { siteConfig } from '@/data/site';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
@@ -19,7 +19,7 @@ export default function BlogIndexPage() {
   ]);
 
   // Sort by publishDate descending
-  const sorted = [...blogArticles].sort((a, b) => b.publishDate.localeCompare(a.publishDate));
+  const sorted = [...publishedArticles()].sort((a, b) => b.publishDate.localeCompare(a.publishDate));
 
   return (
     <>
