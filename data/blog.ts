@@ -358,6 +358,183 @@ export const blogArticles: BlogArticle[] = [
       { type: 'p', text: "If you want impartial advice while you decide, the Oral Health Foundation runs a free, independent [dental helpline](https://www.dentalhealth.org/dental-helpline) staffed by qualified professionals who can talk you through looking after the tooth until your appointment. When you are ready to be seen quickly in Harlow, tell us what happened using the form on this page and we will match you with a local dentist. We are an independent matching service and do not treat you ourselves." },
     ],
   },
+  {
+    slug: 'bleeding-that-wont-stop-after-a-tooth-extraction',
+    title: "Bleeding That Won't Stop After a Tooth Extraction",
+    metaTitle: 'Bleeding After a Tooth Extraction: What to Do',
+    metaDescription:
+      'How to stop bleeding after a tooth extraction: the gauze pressure method, protecting the clot, what to avoid for 24 hours, and when persistent bleeding needs a dentist in Harlow.',
+    category: 'Trauma & first aid',
+    publishDate: '2026-07-03',
+    draft: true,
+    excerpt:
+      'Some oozing after an extraction is normal, but bleeding that keeps going is unsettling. Here is the pressure method that actually works, how to protect the clot, and when to get seen in Harlow.',
+    content: [
+      { type: 'p', text: "A little bleeding after a tooth is taken out is completely normal and can carry on, as a slow ooze mixed with saliva, for several hours. It usually looks worse than it is because even a small amount of blood mixes with spit and spreads pink across the mouth. What matters is knowing the difference between that ordinary ooze and true bleeding that will not settle, and knowing the pressure method that stops most of it at home." },
+
+      { type: 'h2', text: 'The pressure method that works' },
+      { type: 'p', text: "Bleeding from a socket almost always stops with firm, sustained pressure in the right place. The most common mistake is dabbing at it, changing the gauze every couple of minutes to check, or biting somewhere that does not press on the socket itself." },
+      { type: 'list', items: [
+        'Roll a clean piece of gauze, or a clean cotton handkerchief, into a firm pad big enough to sit directly over the socket, not beside it.',
+        'Dampen it very slightly so it does not stick to and pull away the forming clot.',
+        'Bite down firmly and hold without moving or checking for at least ten minutes, and preferably twenty. The steady pressure is what lets a clot form.',
+        'If it is still bleeding, replace the pad and repeat for another twenty minutes. Two full rounds of proper pressure settle most sockets.',
+        'A cold, damp black or green teabag makes a good backup pad. The tannins in tea help the blood clot, and biting on one for twenty minutes often works when plain gauze alone has not.',
+      ] },
+      { type: 'p', text: "Stay upright and calm while you do this. Lying down raises the blood pressure in your head and keeps the ooze going, so sit up with your head slightly forward rather than tipping it back." },
+
+      { type: 'h2', text: 'Protecting the clot for the first 24 hours' },
+      { type: 'p', text: "Once a clot has formed in the socket it is doing the healing, and the whole job for the next day is to leave it undisturbed. Dislodging it restarts the bleeding and can lead to a painful dry socket a few days later, so the don'ts here matter as much as the pressure." },
+      { type: 'list', items: [
+        'Do not rinse, swish or spit for the first 24 hours. Rinsing washes the clot straight out.',
+        'Do not suck through a straw, smoke or vape. The suction pulls the clot loose.',
+        'Avoid hot food and drink, alcohol and strenuous exercise for the rest of the day, as all raise the flow and soften the clot.',
+        'Do not poke the socket with your tongue or a finger to feel what is going on.',
+        'From the day after, gentle warm salt-water rinses, a teaspoon of salt in a cup of warm water, keep the area clean without disturbing the clot.',
+      ] },
+      { type: 'note', text: "The clot is the healing. For 24 hours do not rinse, spit, suck through a straw, smoke or drink alcohol, and keep food and drink lukewarm rather than hot." },
+
+      { type: 'h2', text: 'When the bleeding needs a dentist' },
+      { type: 'p', text: "Steady oozing that slows over the first few hours is expected. Get in touch with a dentist if bleeding is still brisk after two full rounds of twenty-minute pressure, if it suddenly restarts heavily a day or two later, if you are on blood-thinning medication and it will not settle, or if you feel faint, dizzy or are losing more than a slow trickle. Fresh red blood filling the mouth quickly is different from pink-tinged saliva and is the sign to act. A dentist can pack the socket, place a dissolvable dressing or put in a small stitch to close it, none of which you can do at home." },
+      { type: 'p', text: "The general steps for looking after a healing socket, and the routes to urgent care, are set out on the [NHS pages for finding a dentist](https://www.nhs.uk/nhs-services/dentists/). For a heavy bleed you genuinely cannot control with pressure, especially after a blow to the face or alongside a serious head injury, treat it as an emergency: in Harlow that means the A&E department at Princess Alexandra Hospital on Hamstel Road, or call 999." },
+
+      { type: 'h2', text: 'Bleeding after a knock rather than a planned extraction' },
+      { type: 'p', text: "Not all mouth bleeding comes from a socket. A fall or a blow can split the lip, tongue or cheek, and the mouth's rich blood supply means even a small cut bleeds dramatically. The same principle applies, firm pressure with clean gauze for ten to fifteen minutes without lifting to peek. If a whole tooth has come out in the injury rather than being extracted, that is a separate and more time-critical problem, and [a knocked-out adult tooth](/blog/what-to-do-if-you-knock-out-a-tooth/) needs storing in milk and re-implanting within the hour. Where the injury involves a child, the first-aid steps for [children's dental emergencies in Harlow](/blog/childrens-dental-emergencies-what-parents-should-do-harlow/) cover bitten lips and knocks during play." },
+
+      { type: 'h2', text: 'Getting seen quickly in Harlow' },
+      { type: 'p', text: "During the day your own dentist, or the practice that did the extraction, is the first call, as they know the socket and can deal with it fastest. Out of hours and at weekends, NHS 111 can assess you and direct you to urgent NHS dental care through the west Essex rota that covers Harlow and the surrounding CM postcodes, from Old Harlow and Church Langley to Staple Tye and Sawbridgeworth. If you would rather be matched to a private slot, our [out-of-hours emergency dental service in Harlow](/services/out-of-hours/) can pair you with a local dentist when your own practice is closed. For impartial advice while the pressure is doing its work, the Oral Health Foundation runs a free, independent [dental helpline](https://www.dentalhealth.org/dental-helpline) staffed by qualified professionals." },
+      { type: 'p', text: "If bleeding after an extraction will not settle and you want to be seen quickly in Harlow, tell us what happened using the form on this page and we will match you with a local dentist. We are an independent matching service and do not treat you ourselves." },
+    ],
+  },
+  {
+    slug: 'out-of-hours-and-weekend-emergency-dentist-in-harlow',
+    title: 'Out-of-Hours and Weekend Emergency Dentist in Harlow',
+    metaTitle: 'Out-of-Hours Emergency Dentist in Harlow',
+    metaDescription:
+      'How to find an emergency dentist in Harlow in the evening, at weekends and on bank holidays: the NHS 111 route, the west Essex urgent rota, private options and what counts as urgent.',
+    category: 'Local',
+    publishDate: '2026-07-03',
+    draft: true,
+    excerpt:
+      'Dental emergencies rarely wait for Monday morning. Here is how out-of-hours care actually works in Harlow, when NHS 111 is the right call, and what to do while you wait.',
+    content: [
+      { type: 'p', text: "Toothache and dental injuries have a habit of flaring on a Friday night or over a bank holiday weekend, exactly when your own practice is shut. Harlow has two out-of-hours routes running in parallel, the NHS emergency pathway through NHS 111 and private evening or weekend appointments, and knowing which fits your situation saves hours of ringing round. Both are worth understanding before you need them, along with what genuinely counts as an out-of-hours emergency and what to do to hold things together until you are seen." },
+
+      { type: 'h2', text: 'The NHS out-of-hours route through 111' },
+      { type: 'p', text: "Outside normal practice hours the NHS emergency dental pathway runs through NHS 111, which is free and open 24 hours a day. You call or use 111 online, describe the problem, and a trained adviser assesses how urgent it is. For genuine dental emergencies they can book you directly into an urgent dental appointment, a capability that has been in place across England since 2024. In this part of Essex those appointments sit on a shared west Essex rota, so the dentist you are sent to may be in Harlow, Bishop's Stortford or Epping depending on who is on call that day." },
+      { type: 'p', text: "It helps to be realistic about timing. NHS England's clinical standard aims for a same-day response to a true emergency, but at busy weekends and over bank holidays the slot offered can be the next day rather than within the hour, and 111 itself can take a while to call back when demand is high. The cost, if you are seen, is the single NHS urgent charge for the whole course of treatment, which the [NHS dental costs page](https://www.nhs.uk/nhs-services/dentists/dental-costs/) keeps up to date as it is reviewed each April." },
+
+      { type: 'h2', text: 'Private evening and weekend appointments' },
+      { type: 'p', text: "The private route means a Harlow-area practice that keeps some out-of-hours capacity, booked either by ringing round yourself or through a matching service. A handful of local practices offer Saturday morning slots and a smaller number cover Sundays and bank holidays, usually by appointment only and at a premium over weekday fees. The advantage is choice and speed: you are seen at a set time near you rather than wherever the rota lands, and you can often keep the same dentist for any follow-up treatment. The trade-off is cost, which runs higher than the NHS charge, particularly for the premium out-of-hours slots." },
+      { type: 'p', text: "Calling round yourself on a Saturday is slow, because you are competing for a small number of weekend slots and most receptions are unstaffed. A matching service that already knows which local practices have out-of-hours capacity shortcuts that, pairing you with a practice that can see you rather than leaving you to phone down a list, which is what our [out-of-hours emergency dental service in Harlow](/services/out-of-hours/) does. Whether the NHS or the private route gets you seen sooner depends on the day and how much you are willing to pay, and [the NHS and private routes in Harlow](/blog/nhs-vs-private-emergency-dental-harlow/) split most clearly on exactly that trade-off." },
+
+      { type: 'h2', text: 'What actually counts as an out-of-hours emergency' },
+      { type: 'p', text: "Both NHS 111 and the matched dentist triage by clinical urgency, not by how much a problem is bothering you at 2am. The following genuinely warrant out-of-hours care rather than waiting for the next working day:" },
+      { type: 'list', items: [
+        'Severe pain not controlled by over-the-counter painkillers taken correctly.',
+        'A knocked-out or badly broken adult tooth from an injury.',
+        'Bleeding after an extraction that will not settle with sustained pressure.',
+        'Facial swelling from a suspected dental infection, especially if it is spreading.',
+        'Trauma to the mouth with a heavy blow, deep cut or possible fracture.',
+      ] },
+      { type: 'p', text: "By contrast, a lost filling with no pain, a small painless chip or a mild ache that responds to painkillers can usually wait for a routine appointment. If you are unsure whether throbbing pain is an ordinary toothache or something that has turned into an abscess, the difference is worth understanding, because [recognising a dental abscess](/blog/recognising-a-dental-abscess-vs-routine-toothache/) is what tells you whether same-day out-of-hours care or a hospital is the right call." },
+
+      { type: 'h2', text: 'Holding things together until you are seen' },
+      { type: 'p', text: "Whichever route you take, you may have to wait a few hours for the slot, and how you use that time matters. For pain, taking ibuprofen and paracetamol together works far better than either alone, the core of [managing severe toothache before you can be seen](/blog/managing-severe-toothache-before-you-can-be-seen/), and sleeping propped up on extra pillows reduces the throbbing. For general reassurance overnight, the Oral Health Foundation runs a free, independent [dental helpline](https://www.dentalhealth.org/dental-helpline) staffed by qualified professionals who can talk you through what you are dealing with." },
+
+      { type: 'h2', text: 'When it is a hospital problem, not a dental one' },
+      { type: 'p', text: "Out-of-hours dental care is for dental emergencies. Some situations are medical emergencies and belong at A&E or on 999, whatever the hour. Facial swelling spreading towards the eye, throat or neck, any difficulty swallowing or breathing, a high fever with shaking chills, or bleeding you cannot control after an injury all need hospital care rather than a dentist. In Harlow the emergency department is at Princess Alexandra Hospital on Hamstel Road. If your child is affected, the same thresholds apply, and cost is not a factor either way, since NHS dental treatment is free for under-18s." },
+      { type: 'p', text: "If you need an out-of-hours or weekend emergency dentist in Harlow, tell us what has happened using the form on this page and we will match you with a local dentist who can see you. We are an independent matching service and do not treat you ourselves." },
+    ],
+  },
+  {
+    slug: 'what-an-emergency-dental-appointment-costs-in-harlow',
+    title: 'What an Emergency Dental Appointment Costs in Harlow',
+    metaTitle: 'Emergency Dental Appointment Cost in Harlow',
+    metaDescription:
+      'What an emergency dentist costs in Harlow: the single NHS urgent charge, indicative private consultation and treatment ranges, who is exempt, and how to avoid paying more than you need to.',
+    category: 'Local',
+    publishDate: '2026-07-03',
+    draft: true,
+    excerpt:
+      'Cost is the first question most people have in a dental emergency. Here is an honest breakdown of the NHS urgent charge and the private ranges in Harlow, and who pays nothing at all.',
+    content: [
+      { type: 'p', text: "When a tooth flares up out of nowhere, one of the first worries is what it is going to cost to get it dealt with, and unhelpfully the answer is often hidden until you are in the chair. In Harlow there are two pricing worlds, the fixed NHS urgent charge and the variable private fee, and they work very differently. This guide breaks down what each actually costs, who pays nothing at all, and how to avoid spending more than you need to in a genuine emergency." },
+
+      { type: 'h2', text: 'The NHS urgent charge is a single flat fee' },
+      { type: 'p', text: "NHS urgent dental treatment in England is charged as one flat Band 1 fee for the entire course of urgent care, however many problems are dealt with in that visit and even if it takes more than one appointment to finish. From April 2026 that fee is £27.90. So an emergency appointment through NHS 111 that relieves pain, drains an abscess or dresses a broken tooth is a single charge, not a running total. Because the amount is reviewed each April, it is worth confirming the current figure on the [NHS dental costs page](https://www.nhs.uk/nhs-services/dentists/dental-costs/) rather than assuming last year's number." },
+      { type: 'p', text: "There is an important limit to this. The urgent charge covers immediate treatment to get you out of trouble. If that visit leads to further planned work, a crown, a root canal completed later, a new denture, that follow-up is charged at the appropriate higher NHS band as a separate course of treatment. The urgent fee gets the emergency under control, it does not cover everything that might follow." },
+
+      { type: 'h2', text: 'Who pays nothing' },
+      { type: 'p', text: "NHS dental treatment, including urgent care, is free for a number of groups, so cost should never be the reason someone in this position delays being seen:" },
+      { type: 'list', items: [
+        'Anyone under 18.',
+        'Under 19 and in full-time education.',
+        'Pregnant, or having had a baby in the previous 12 months.',
+        'Receiving certain low-income benefits, such as Income Support or Universal Credit within the qualifying thresholds.',
+      ] },
+      { type: 'p', text: "For a child in particular this matters, because there is no charge to weigh against getting them checked, one of the reasons [children's dental emergencies in Harlow](/blog/childrens-dental-emergencies-what-parents-should-do-harlow/) are rarely worth delaying over money." },
+
+      { type: 'h2', text: 'What private emergency care costs' },
+      { type: 'p', text: "Private emergency dentistry is priced per practice and per treatment, so there is no single figure, but the shape is predictable. A private emergency consultation and examination in the Harlow area is typically in the region of £80 to £150, with any treatment costed on top of that. Out-of-hours, weekend and bank-holiday slots carry a premium, and a private emergency appointment at those times can sit higher, roughly £150 to £250 for the visit before treatment. Treat all of these as indicative ranges to plan around, not fixed quotes, and expect the practice to confirm the figure before doing anything." },
+      { type: 'p', text: "What you pay for is speed and choice, a set appointment near you, often with the dentist who would treat you as a regular patient, and easier access to weekend slots than the NHS rota offers. Whether that is worth the difference over the NHS charge is the heart of choosing between [the NHS and private routes in Harlow](/blog/nhs-vs-private-emergency-dental-harlow/), and it comes down to how quickly you need to be seen and how much the timing is worth to you." },
+
+      { type: 'h2', text: 'How to avoid paying more than you need to' },
+      { type: 'p', text: "A few habits keep the bill sensible in an emergency:" },
+      { type: 'list', items: [
+        'Ask for the consultation fee and a treatment estimate before agreeing to anything. A reputable practice quotes upfront.',
+        'Check whether you are in one of the exempt groups above before assuming you will be charged.',
+        'Do not let a manageable problem become an expensive one by waiting. A lost filling left for weeks can turn a small repair into a root canal.',
+        'Match the urgency to the route. A painless chip does not need a premium Sunday slot; severe pain or spreading swelling does need to be seen at once.',
+      ] },
+      { type: 'p', text: "That last point is where an honest sense of urgency saves money. Knowing whether a problem is a true emergency or something that can wait for a routine appointment stops you paying an out-of-hours premium for something that did not need it, and a painful tooth can often be held steady with the pain-relief steps for [managing severe toothache before you can be seen](/blog/managing-severe-toothache-before-you-can-be-seen/) until an ordinary appointment. For impartial guidance on your options, the Oral Health Foundation runs a free, independent [dental helpline](https://www.dentalhealth.org/dental-helpline)." },
+
+      { type: 'h2', text: 'Getting matched to the right cost route in Harlow' },
+      { type: 'p', text: "If you want to be seen quickly in Harlow and would like to weigh the cost as you go, tell us what has happened using the form on this page. We will match you with a local dentist, and where the NHS urgent route is the sensible choice we will say so rather than steering you to a private slot you do not need. We are an independent matching service and do not treat you ourselves, so any fee is set and taken by the practice you are matched to, quoted to you before treatment." },
+    ],
+  },
+  {
+    slug: 'pain-after-dental-treatment-what-is-normal-and-what-is-not',
+    title: 'Pain After Dental Treatment: What Is Normal and What Is Not',
+    metaTitle: 'Pain After Dental Treatment: Normal or a Problem?',
+    metaDescription:
+      'What is normal pain after a filling, extraction or root canal, when soreness signals a problem like dry socket or a high filling, and when to get seen again by a dentist in Harlow.',
+    category: 'Emergency basics',
+    publishDate: '2026-07-03',
+    draft: true,
+    excerpt:
+      'Some ache after dental work is expected. The trick is knowing which soreness settles on its own and which is a sign something needs looking at again. Here is how to tell them apart.',
+    content: [
+      { type: 'p', text: "Leaving the dentist and finding the tooth still sore, or newly sore, is unsettling, especially after treatment that was meant to fix the problem. Most post-treatment discomfort is normal and fades within a few days as the area heals or settles. A smaller share is a genuine sign that something needs looking at again. Knowing which is which stops you both panicking over an ordinary ache and ignoring a problem that will only get worse. What follows is what to expect after the common treatments and where the line sits between healing and a problem." },
+
+      { type: 'h2', text: 'After a filling' },
+      { type: 'p', text: "It is normal for a newly filled tooth to be sensitive to hot, cold and pressure for a few days, sometimes up to a couple of weeks for a deep filling that was close to the nerve. That sensitivity should be settling, not building. Two things are worth watching for. If the tooth feels tall or hits first when you bite, the filling is very slightly too high and needs a quick adjustment, an easy five-minute fix that also stops the ache it causes. If, instead, sensitivity turns into spontaneous throbbing pain that arrives without a trigger and lingers, the nerve may have been irritated beyond recovery, which can point towards needing a root canal." },
+      { type: 'note', text: "A filling that feels tall or catches when you bite is not something to put up with. A dentist adjusts it in minutes, and doing so often clears up the soreness straight away." },
+
+      { type: 'h2', text: 'After an extraction' },
+      { type: 'p', text: "Soreness at the extraction site for two to three days, easing steadily, is exactly what should happen, and ordinary painkillers manage it. The complication to know about is dry socket, where the protective blood clot is lost from the socket before it has healed. The tell-tale pattern is pain that improves for a day or two and then gets sharply worse around three to five days after the extraction, often a deep throbbing that radiates to the ear or eye on the same side, with a bad taste or smell. Dry socket is not dangerous but it is genuinely painful and does not settle on its own, because the exposed bone needs a dentist to clean and dress the socket. Protecting the clot in the first place is the best prevention, which means not rinsing, spitting, smoking or drinking through a straw for the first 24 hours after the tooth comes out." },
+
+      { type: 'h2', text: 'After a root canal' },
+      { type: 'p', text: "A root-treated tooth is commonly tender to bite on for several days afterwards, because the tissue around the root tip is inflamed from the treatment, and this usually fades over a week or so with over-the-counter painkillers. What is not expected is severe, escalating pain, or swelling that appears after the treatment, which can mean a flare-up of infection that needs the dentist to reassess. Mild tenderness on biting that is slowly improving is part of normal healing; a tooth that becomes more painful by the day is not." },
+
+      { type: 'h2', text: 'The signs that always mean go back' },
+      { type: 'p', text: "Whatever the treatment, some patterns tell you to be seen again rather than wait it out:" },
+      { type: 'list', items: [
+        'Pain that gets worse after the third day rather than better.',
+        'Swelling of the gum, cheek or face that appears or grows after treatment.',
+        'A filling or crown that feels high, catches or has come loose.',
+        'A bad taste, discharge or fever alongside the pain.',
+        'Pain severe enough that the combination of ibuprofen and paracetamol is not touching it.',
+      ] },
+      { type: 'p', text: "Swelling and fever in particular move a problem out of the ordinary-healing category. If facial swelling from a tooth spreads towards the eye, throat or neck, or comes with difficulty swallowing or breathing, that is a medical emergency for 999 or A&E rather than a dental one, and the warning signs are the same ones set out for [recognising a dental abscess](/blog/recognising-a-dental-abscess-vs-routine-toothache/). In Harlow the emergency department is at Princess Alexandra Hospital on Hamstel Road." },
+
+      { type: 'h2', text: 'Managing the wait if you need to be seen again' },
+      { type: 'p', text: "If post-treatment pain crosses the line and you need reviewing, the same holding measures apply as for any dental pain. Taking ibuprofen and paracetamol together at the correct doses, avoiding very hot or cold food on the tooth, and sleeping propped up are the same steps that help with [managing severe toothache before you can be seen](/blog/managing-severe-toothache-before-you-can-be-seen/). For impartial reassurance about whether what you are feeling is normal healing or something to act on, the Oral Health Foundation runs a free, independent [dental helpline](https://www.dentalhealth.org/dental-helpline) staffed by qualified professionals, and the [NHS advice on dental care](https://www.nhs.uk/nhs-services/dentists/) sets out the routes to being seen." },
+
+      { type: 'h2', text: 'Getting reviewed in Harlow' },
+      { type: 'p', text: "The dentist who did the work is the right first call for pain that follows their treatment, because they know what was done and can adjust a high filling or dress a dry socket quickly, often at no or low cost as a review. If they are closed and the pain is severe, NHS 111 can direct you to urgent NHS dental care through the west Essex rota covering Harlow and the surrounding CM postcodes, from Old Harlow and Church Langley to Staple Tye and Sawbridgeworth. If you cannot get back to your own dentist and want to be seen quickly in Harlow, tell us what happened using the form on this page and we will match you with a local dentist. We are an independent matching service and do not treat you ourselves." },
+    ],
+  },
 ];
 
 export const getArticleBySlug = (slug: string): BlogArticle | undefined =>
