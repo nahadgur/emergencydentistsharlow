@@ -316,7 +316,7 @@ export const blogArticles: BlogArticle[] = [
       'What to do in the first hour after breaking or chipping a tooth in Harlow: keeping the fragment, easing sensitivity, protecting a sharp edge, and when a break is genuinely urgent.',
     category: 'Emergency basics',
     publishDate: '2026-07-02',
-    draft: true,
+    draft: false,
     excerpt:
       'A chipped or broken tooth is alarming but rarely a true emergency. Here is what to do in the first hour, how to tell a cosmetic chip from an urgent break, and how to get seen in Harlow.',
     content: [
