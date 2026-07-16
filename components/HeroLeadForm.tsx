@@ -105,7 +105,7 @@ export function HeroLeadForm({ area, service }: Props) {
   }
 
   const fieldClass =
-    'w-full px-3.5 py-2.5 text-[14px] font-sans bg-cream border border-ink/15 rounded-md text-ink placeholder-ink/40 focus:outline-none focus:border-brand-500 focus:bg-white transition-colors';
+    'w-full px-3.5 py-2.5 text-base font-sans bg-cream border border-ink/15 rounded-md text-ink placeholder-ink/40 focus:outline-none focus:border-brand-500 focus:bg-white transition-colors';
   const labelClass = 'block text-[10px] font-mono uppercase tracking-[0.15em] text-ink/55 mb-1.5';
 
   return (
