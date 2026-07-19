@@ -23,7 +23,7 @@ export const heroContent = {
   eyebrow: 'Free matching · Vetted Harlow emergency dentists',
   // titleHtml carries inline <strong> bolding of the LSI head terms.
   titleHtml:
-    '<strong>Severe toothache</strong>, <strong>knocked-out tooth</strong>, or <strong>broken filling</strong>?',
+    'Emergency dentist in Harlow. <strong>Severe toothache</strong>, <strong>knocked-out tooth</strong>, or <strong>broken filling</strong>?',
   subtitleHtml:
     'Tell us what is wrong and we will match you with a vetted Harlow <strong>emergency dental appointment</strong> — usually within 60 minutes during opening hours, first thing the next morning otherwise. <strong>GDC-registered dentist</strong>, <strong>professional indemnity insurance</strong>, free to patients.',
 };
