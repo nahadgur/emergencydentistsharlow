@@ -2,7 +2,8 @@
 export const siteConfig = {
   name: 'Emergency Dentists Harlow',
   tagline: 'Same-day matching with vetted Harlow emergency dentists',
-  url: 'https://www.emergencydentistsharlow.co.uk',
+  // Apex: the deploy serves it and redirects www, so canonicals must name it.
+  url: 'https://emergencydentistsharlow.co.uk',
   description:
     'Free matching service for urgent dental care in Harlow. Severe toothache, knocked-out tooth, broken tooth, abscess, lost filling — matched within an hour during opening hours, next-morning otherwise. GDC-registered dentists across CM17, CM18, CM19, CM20.',
   // Geographic service area (used in schema). Centralised so organisation/
