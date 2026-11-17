@@ -81,9 +81,9 @@ export function HeroLeadForm({ area, service }: Props) {
       setDone(true);
     } catch (err) {
       console.error('Lead submission failed:', err);
-      const msg = err instanceof Error ? err.message : 'Something went wrong. Please try again.';
-      setError(msg);
-      const fieldId = fieldIdForError(msg);
+      const detail = err instanceof Error ? err.message : '';
+      const fieldId = fieldIdForError(detail);
+      setError(fieldId ? 'Please check the highlighted field and try again.' : 'We could not send your request. Please check your connection and try again.');
       if (fieldId) pulseField(form.querySelector(`#${fieldId}`) as HTMLElement | null);
     } finally {
       setSubmitting(false);
